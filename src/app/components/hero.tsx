@@ -11,10 +11,10 @@ export function Hero() {
       />
       <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
         <h1 className="text-3xl p-2 md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-4">
-          Hi, I'm Shubham Singh <br /> - Engineer. Entrepreneur. Author -
+          Hi, I&apos;m Shubham Singh <br /> - Engineer. Entrepreneur. Author -
         </h1>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-          I am a versatile and passionate professional with over 7 years of experience in engineering, entrepreneurship, and research. My journey spans Core software development, Platform engineering, DevOps/DevSecOps, System architecture, and etc. I thrive in solving complex problems and driving innovation across diverse industries.
+          I am a versatile and passionate professional with over 7 years of experience in engineering, entrepreneurship, and research. My journey spans core software development, platform engineering, DevOps/DevSecOps, system architecture, and more. I thrive in solving complex problems and driving innovation across diverse industries.
         </p>
       </div>
     </div>
