@@ -10,11 +10,11 @@ export function Navbar({ className }: { className?: string }) {
         >
             <Menu setActive={setActive}>
                 <HoveredLink href="/">Home</HoveredLink>
-                <HoveredLink href="/about">Story</HoveredLink>
+                <HoveredLink href="/story">Story</HoveredLink>
                 <MenuItem setActive={setActive} active={active} item="Highlights">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/about">Work chronicals</HoveredLink>
-                        <HoveredLink href="/about">Startup(s) saga</HoveredLink>
+                        <HoveredLink href="/story">Startup(s) saga</HoveredLink>
                         <HoveredLink href="/team">What I&apos;ve learnt</HoveredLink>
                         <HoveredLink href="/individual">What I&apos;ve built</HoveredLink>
                         <HoveredLink href="/enterprise">What I excel at</HoveredLink>
