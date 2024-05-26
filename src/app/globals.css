@@ -35,3 +35,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.max-h-screen {
+  max-height: 100vh;
+}
