@@ -15,8 +15,8 @@ export function Navbar({ className }: { className?: string }) {
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/about">Work chronicals</HoveredLink>
                         <HoveredLink href="/about">Startup(s) saga</HoveredLink>
-                        <HoveredLink href="/team">What I've learnt</HoveredLink>
-                        <HoveredLink href="/individual">What I've built</HoveredLink>
+                        <HoveredLink href="/team">What I&apos;ve learnt</HoveredLink>
+                        <HoveredLink href="/individual">What I&apos;ve built</HoveredLink>
                         <HoveredLink href="/enterprise">What I excel at</HoveredLink>
                     </div>
                 </MenuItem>
