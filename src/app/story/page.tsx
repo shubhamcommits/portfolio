@@ -102,7 +102,7 @@ export default function StoryPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-3xl mx-auto px-4"
             >
-              From a curious engineer to a platform architect, here's how I've evolved through 
+              From a curious engineer to a platform architect, here&apos;s how I&apos;ve evolved through 
               7+ years of solving complex problems and building scalable solutions
             </motion.p>
           </motion.div>
@@ -189,7 +189,7 @@ export default function StoryPage() {
               <h2 className="text-2xl font-semibold text-white mb-4">Beyond the Code</h2>
               <p className="text-neutral-300 leading-relaxed mb-6">
                 I believe in the power of technology to transform lives and businesses. My journey has been 
-                about more than just writing code – it's about building systems that scale, leading teams 
+                about more than just writing code – it&apos;s about building systems that scale, leading teams 
                 that innovate, and creating solutions that make a real difference. From managing infrastructure 
                 for millions of users to mentoring the next generation of engineers, every experience has 
                 shaped my approach to problem-solving and leadership.

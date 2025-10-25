@@ -66,7 +66,7 @@ export default function ContactPage() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6"
             >
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                Let's Connect
+                Let&apos;s Connect
               </span>
             </motion.h1>
             <motion.p
@@ -127,10 +127,10 @@ export default function ContactPage() {
             <div className="p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20">
               <h2 className="text-2xl font-semibold text-white mb-4">Open to Opportunities</h2>
               <p className="text-neutral-300 leading-relaxed mb-6">
-                I'm always interested in hearing about new opportunities in platform engineering, 
-                cloud architecture, and AI/ML operations. Whether you're looking for someone to lead 
+                I&apos;m always interested in hearing about new opportunities in platform engineering, 
+                cloud architecture, and AI/ML operations. Whether you&apos;re looking for someone to lead 
                 technical initiatives, architect scalable solutions, or drive innovation in your organization, 
-                I'd love to explore how we can work together.
+                I&apos;d love to explore how we can work together.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <span className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm">

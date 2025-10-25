@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/utils/cn";
 
 export type SubRole = {
@@ -102,15 +103,13 @@ export function ExperienceCard(props: Props) {
                       </span>
                     </div>
                   ) : (
-                    <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-lg bg-white">
-                      <img
-                        src={logoSrc}
+                    <div className="relative w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center p-2 flex-shrink-0">
+                      <Image
+                        src={logoSrc || ''}
                         alt={`${company} logo`}
-                        className={cn(
-                          "w-full h-full object-contain",
-                          // Specific scaling for different logos
-                          logoSrc?.includes('salesforce') ? "scale-150 p-1" : logoSrc?.includes('amway') ? "scale-125 p-1" : logoSrc?.includes('airtel') ? "scale-125 p-1" : "p-2"
-                        )}
+                        width={40}
+                        height={40}
+                        className="object-contain w-full h-full"
                       />
                     </div>
                   )}
