@@ -8,9 +8,7 @@ export function Hero() {
   return (
     <div className="bg-black">
       <section id="hero" className="w-full rounded-md antialiased bg-grid-white/[0.02] relative overflow-hidden">
-        <div className="relative w-full flex items-center justify-center">
-          <Navbar className="top-2" />
-        </div>
+        <Navbar />
         <LampContainer>
           <motion.h1
             initial={{ opacity: 0.5, y: 100 }}

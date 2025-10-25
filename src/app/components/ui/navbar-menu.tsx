@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const transition = {
-  type: "spring",
+  type: "spring" as const,
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -69,8 +69,8 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)}
-      className="relative rounded-full boder border-transparent dark:bg-slate-920 dark:border-black/[0.2] bg-slate-920 shadow-input flex justify-center space-x-4 px-8 py-6 "
+      onMouseLeave={() => setActive(null)} // resets the state
+      className="relative rounded-full border border-white/10 bg-black/20 shadow-input flex justify-center space-x-2 sm:space-x-4 px-4 sm:px-8 py-4 sm:py-6 backdrop-blur-md"
     >
       {children}
     </nav>
@@ -113,7 +113,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-500 dark:text-neutral-200 text-white "
+      className="text-neutral-200"
     >
       {children}
     </Link>
