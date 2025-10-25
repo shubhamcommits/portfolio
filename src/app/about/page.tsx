@@ -15,8 +15,8 @@ export default function AboutPage() {
           <div className="space-y-6 text-neutral-200">
             <p>
               I design and build resilient platforms, automation, and products. Over the years I
-              have worked across platform engineering, DevSecOps, SRE, and full‑stack development,
-              leading large-scale Kubernetes estates, optimizing CI/CD, and crafting AI‑assisted
+              have worked across platform engineering, DevSecOps, SRE, and full-stack development,
+              leading large-scale Kubernetes estates, optimizing CI/CD, and crafting AI-assisted
               operational tooling.
             </p>
             <p>

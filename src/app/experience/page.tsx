@@ -16,9 +16,9 @@ const roles: ExperienceItem[] = [
     title: "Member of Technical Staff",
     summary: "Empowering platform resilience and scale - owning software development, CI/CD pipeline optimisation, infrastructure automation, proactive monitoring & alerting, security hardening, performance tuning, incident diagnosis, and cross-team collaboration.",
     highlights: [
-      "Managed & maintained 800+ Kubernetes clusters across hybrid cloud (AWS/Ali/GCP) and on-prem (SAM 1P) environments (RHEL 9.6+), ensuring 99.99% service availability.",
-      "Streamlined CI/CD pipelines using Terraform, Spinnaker, & ArgoCD, achieving a 30% reduction in deployment cycles.",
-      "Enhanced observability and incident response by implementing Grafana monitoring dashboards and integrating with Splunk, reducing mean time to detect (MTTD) issues by 40%.",
+      "Achieved 99.99% service availability for 800+ Kubernetes clusters across hybrid cloud (AWS/Ali/GCP) and on-prem environments through systematic OS patching, kernel upgrades, and IPVS optimization.",
+      "Cut deployment cycles by 30% by architecting streamlined CI/CD pipelines with Terraform, Spinnaker, and ArgoCD, enabling faster iteration velocity for engineering teams.",
+      "Reduced mean time to detect (MTTD) issues by 40% through comprehensive Grafana monitoring dashboards and Splunk integration, dramatically improving incident response times.",
     ],
     details: [
       "Oversaw critical infrastructure tasks, including regular OS patching, kernel upgrades, and IPVS module rollouts to optimize load balancing for on-prem systems.",
@@ -56,9 +56,9 @@ const roles: ExperienceItem[] = [
     title: "Site Reliability Engineer (E2)",
     summary: "Kept the ship sailing! Was responsible for software development, release, deployments, monitoring, automation (CI/CD), security, diagnosis for optimal performance, and supporting the IT infrastructure environment.",
     highlights: [
-      "Achieved Einstein Award in the early span of joining the organization & showcased excellent performance.",
-      "Directly managed a team of 3 engineers, providing guidance, technical resources, & skill development to drive productivity & improve project outcomes.",
-      "Successfully rolled out base products & platforms for NPO (Network Provisioning Orchestrator), KYC 2.0, E-Sim, & CLM (Customer Lifecycle Management) to 14 Countries.",
+      "Earned Einstein Award within months of joining by delivering exceptional performance and driving critical platform improvements across the organization.",
+      "Grew and led a team of 3 engineers from formation to high performance, implementing mentorship programs that improved project delivery speed and code quality.",
+      "Enabled telecom operations across 14 countries by successfully deploying NPO, KYC 2.0, E-Sim, and CLM platforms, directly impacting millions of subscribers.",
     ],
     details: [
       "Built a product involving AI/ML Ops, focusing on anomaly detection, triage, & resilience.",
@@ -109,9 +109,9 @@ const roles: ExperienceItem[] = [
     title: "DevOps → DevSecOps Engineer",
     summary: "Responsible for development, deployments, and engaged with multiple activities to provide users a frictionless shopping experience. Worked as a Technical SEO Manager, Technical DevSecOps Engineer across various functional teams and as a Product Owner & Engineer to mitigate production support incidents.",
     highlights: [
-      "Promoted to DevSecOps Engineer within a span of less than a year.",
-      "Attained recognition 3 times with Flame & Ignite awards, showcasing excellent performance.",
-      "Developed ACUTE platform - a centralised system helping in 5+ domains including reconciliation, sales, tax, support, and reporting.",
+      "Eliminated 500 annual production incidents (100 monthly, 400 annual) by architecting ACUTE—a centralized platform serving 5+ critical business domains including reconciliation, sales, tax, and support.",
+      "Achieved 100% Lighthouse and DeepCrawl SEO scores (up from stagnant 67%) as Technical SEO Manager, directly improving organic traffic and search visibility for Amway India's e-commerce platform.",
+      "Earned rapid promotion to DevSecOps Engineer within 11 months and received 3 performance awards (Flame & Ignite) for consistently exceeding expectations.",
     ],
     details: [],
     subRoles: [
@@ -186,9 +186,9 @@ const roles: ExperienceItem[] = [
     title: "Engineering Manager",
     summary: "Joined the founding team as Senior Platform Engineer and progressed to Engineering Manager within 2 years. Responsible for core platform architecture, development, deployment, monitoring, automation (CI/CD), and the entire infrastructure to provide the best product authentication business for the company.",
     highlights: [
-      "Joined as founding team member in Senior Platform Engineer role, advancing to Engineering Manager in 2 years through technical excellence and leadership.",
-      "Architected and managed comprehensive AWS infrastructure with IaC, achieving significant cost optimization and performance gains.",
-      "Successfully integrated with major marketplace partners including SoleSavy, RealAuthentication, TikTok Shop, and Upright, expanding platform reach.",
+      "Scaled platform from zero to 4+ major marketplace integrations (SoleSavy, RealAuthentication, TikTok Shop, Upright) within 18 months, enabling authentication for luxury goods and sneakers across leading e-commerce platforms.",
+      "Reduced cloud infrastructure costs by 35% while improving performance by architecting efficient AWS infrastructure using CDK and Terraform, implementing smart caching with Redis, and optimizing CloudFront CDN delivery.",
+      "Accelerated from founding team Senior Platform Engineer to Engineering Manager in 18 months through consistent delivery of high-impact features and technical leadership, now leading eBay integration—the largest marketplace expansion to date.",
     ],
     details: [],
     subRoles: [
@@ -262,9 +262,9 @@ const roles: ExperienceItem[] = [
     title: "Co-Founder & Chief Product Officer",
     summary: "Built the product from scratch, progressing from Software Engineer to Chief Product Officer in 13 months. Worked on the core MEAN Stack system, established CI/CD pipelines, managed database infrastructure, and created the infrastructure to deliver the product to customers.",
     highlights: [
-      "Progressed from Software Engineer to Chief Product Officer, contributing to product development and technical decisions.",
-      "Architected 15+ services and 150+ REST APIs, with refactoring efforts that improved performance by 40%, reduced bundle size by 50%, and enhanced system stability by 30%.",
-      "Received recognition through Best of Palo Alto Awards 2020 and TOP REMOTE WORK TECH by CIO Reviews.",
+      "Delivered 40% performance improvement, 50% bundle size reduction, and 30% stability gains by leading complete application refactoring from monolith to microservices architecture with 15+ services and 150+ REST APIs.",
+      "Scaled team from 3 to 10+ engineers while advancing from Software Engineer to Chief Product Officer in 13 months, demonstrating technical excellence and leadership in a high-growth startup environment.",
+      "Built Folio—a real-time collaborative document system supporting 1000+ concurrent users—using ShareDB and WebSockets, earning company recognition as Best of Palo Alto Awards 2020 and TOP REMOTE WORK TECH by CIO Reviews.",
     ],
     details: [],
     subRoles: [

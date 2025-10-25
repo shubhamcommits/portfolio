@@ -83,8 +83,8 @@ export function Navbar({ className }: { className?: string }) {
                 
                 {/* Mobile Menu Overlay */}
                 {isMobileMenuOpen && (
-                    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center">
-                        <nav className="flex flex-col items-center space-y-6 px-4">
+                    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center overflow-hidden">
+                        <nav className="flex flex-col items-center justify-center space-y-6 px-4 py-20 w-full h-full">
                             <a href="/" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
                             <a href="/story" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Story</a>
                             <a href="/projects" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>

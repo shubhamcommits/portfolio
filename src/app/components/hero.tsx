@@ -20,7 +20,7 @@ export function Hero() {
             }}
             className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl"
           >
-            Hi, I&apos;m Shubham Singh <br /> - Engineer. Entrepreneur. Author -
+            Hi, I&apos;m Shubham Singh <br/> <br /> Scaling Platforms | Engineering Intelligence
           </motion.h1>
         </LampContainer>
       </section>

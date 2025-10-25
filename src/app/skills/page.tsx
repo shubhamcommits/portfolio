@@ -230,7 +230,7 @@ export default function SkillsPage() {
               <p className="text-neutral-400">Technologies & Tools</p>
             </div>
             <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl p-6 border border-indigo-500/20">
-              <h3 className="text-3xl font-bold text-white mb-2">6+</h3>
+              <h3 className="text-3xl font-bold text-white mb-2">7+</h3>
               <p className="text-neutral-400">Years Experience</p>
             </div>
           </motion.div>
