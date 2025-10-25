@@ -349,7 +349,7 @@ export default function ExperiencePage() {
         <Navbar className="top-2" />
       </div>
       <HeroHighlight containerClassName="items-start">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-36 pb-12 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
           {/* Enhanced Header Section */}
           <motion.div 
             className="text-center mb-16"
@@ -390,7 +390,7 @@ export default function ExperiencePage() {
                   key={t.key}
                   onClick={() => setActive(t.key)}
                   className={cn(
-                    "relative px-6 py-2.5 text-sm font-medium rounded-full transition-all duration-300",
+                    "relative px-4 py-2 sm:px-6 sm:py-2.5 text-xs sm:text-sm font-medium rounded-full transition-all duration-300",
                     active === t.key
                       ? "text-white"
                       : "text-neutral-400 hover:text-white"

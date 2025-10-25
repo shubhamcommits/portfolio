@@ -34,7 +34,7 @@ export function PublicationCard({ publication, index, className }: PublicationCa
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-indigo-600/0 group-hover:from-purple-600/5 group-hover:via-pink-600/5 group-hover:to-indigo-600/5 transition-all duration-500" />
       
-      <div className="relative z-10 p-8 lg:p-12">
+      <div className="relative z-10 p-6 sm:p-8 lg:p-12">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
           <div className="flex-1">

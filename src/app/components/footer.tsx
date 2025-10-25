@@ -75,7 +75,7 @@ export function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm text-neutral-400 hover:text-cyan-400 transition-colors duration-200"
+                  className="text-sm text-neutral-400 hover:text-cyan-400 transition-colors duration-200 py-1.5 sm:py-0"
                 >
                   {item.name}
                 </a>
@@ -93,7 +93,7 @@ export function Footer() {
                   href={item.href}
                   target={item.name !== "Email" ? "_blank" : undefined}
                   rel={item.name !== "Email" ? "noopener noreferrer" : undefined}
-                  className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200"
+                  className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 p-2 -m-2"
                   aria-label={item.name}
                 >
                   {item.icon}

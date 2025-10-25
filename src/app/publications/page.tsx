@@ -56,7 +56,7 @@ export default function PublicationsPage() {
     <section id="publications" className="relative">
       <Navbar className="top-2" />
       <HeroHighlight containerClassName="items-start">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-36 pb-12 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
           {/* Header Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

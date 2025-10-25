@@ -88,7 +88,7 @@ export function ExperienceCard(props: Props) {
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/0 via-blue-600/0 to-purple-600/0 group-hover:from-cyan-600/5 group-hover:via-blue-600/5 group-hover:to-purple-600/5 transition-all duration-500" />
       
-      <div className="relative z-10 p-8 lg:p-12">
+      <div className="relative z-10 p-6 sm:p-8 lg:p-12">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
           <div className="mb-4 lg:mb-0">
@@ -116,10 +116,10 @@ export function ExperienceCard(props: Props) {
                 </div>
               )}
               <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-blue-400 group-hover:to-purple-400 transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-blue-400 group-hover:to-purple-400 transition-all duration-300">
                   {company}
                 </h3>
-                <p className="text-lg sm:text-xl text-cyan-400 font-medium mt-1">
+                <p className="text-base sm:text-lg lg:text-xl text-cyan-400 font-medium mt-1">
                   {title}
                 </p>
               </div>

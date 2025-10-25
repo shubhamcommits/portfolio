@@ -34,16 +34,16 @@ export function ProjectCard({ name, company, year, link, linkType = "live", blur
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/0 via-purple-600/0 to-pink-600/0 group-hover:from-indigo-600/5 group-hover:via-purple-600/5 group-hover:to-pink-600/5 transition-all duration-500" />
       
-      <div className="relative z-10 p-8 lg:p-12">
+      <div className="relative z-10 p-6 sm:p-8 lg:p-12">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
           <div className="mb-4 lg:mb-0">
             <div className="mb-2">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-300">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:via-purple-400 group-hover:to-pink-400 transition-all duration-300">
                 {name}
               </h3>
               {company && (
-                <p className="text-lg sm:text-xl text-neutral-400 mt-1">
+                <p className="text-base sm:text-lg lg:text-xl text-neutral-400 mt-1">
                   {company}
                 </p>
               )}
