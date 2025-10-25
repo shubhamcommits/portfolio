@@ -62,7 +62,7 @@ export function Footer() {
             >
               Shubham Singh
             </motion.h3>
-            <p className="text-sm text-neutral-400 max-w-xs">
+            <p className="text-sm text-neutral-400 max-w-xs mx-auto md:mx-0">
               Visionary engineer architecting scalable systems, driving AI innovation, and leading platform engineering across corporate and startup ecosystems
             </p>
           </div>

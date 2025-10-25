@@ -61,10 +61,12 @@ export function Navbar({ className }: { className?: string }) {
             </div>
             
             {/* Mobile Navbar */}
-            <div className="lg:hidden fixed top-4 right-4 z-50">
+            <div className="lg:hidden">
+                {/* Hamburger/Close Button */}
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="p-3 rounded-lg bg-black/20 backdrop-blur-md border border-white/10"
+                    className="fixed top-4 right-4 z-[60] p-3 rounded-lg bg-black/20 backdrop-blur-md border border-white/10 hover:bg-black/40 transition-colors"
+                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
                         {isMobileMenuOpen ? (
@@ -79,17 +81,18 @@ export function Navbar({ className }: { className?: string }) {
                     </svg>
                 </button>
                 
+                {/* Mobile Menu Overlay */}
                 {isMobileMenuOpen && (
-                    <div className="fixed inset-0 bg-black/95 backdrop-blur-lg flex items-center justify-center">
-                        <nav className="flex flex-col items-center space-y-8">
-                            <a href="/" className="text-2xl text-white hover:text-indigo-400 transition-colors">Home</a>
-                            <a href="/story" className="text-2xl text-white hover:text-indigo-400 transition-colors">Story</a>
-                            <a href="/projects" className="text-2xl text-white hover:text-indigo-400 transition-colors">Projects</a>
-                            <a href="/experience" className="text-2xl text-white hover:text-indigo-400 transition-colors">Experience</a>
-                            <a href="/skills" className="text-2xl text-white hover:text-indigo-400 transition-colors">Skills</a>
-                            <a href="/publications" className="text-2xl text-white hover:text-indigo-400 transition-colors">Publications</a>
-                            <a href="/awards" className="text-2xl text-white hover:text-indigo-400 transition-colors">Awards</a>
-                            <a href="/contact" className="text-2xl text-white hover:text-indigo-400 transition-colors">Contact</a>
+                    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center">
+                        <nav className="flex flex-col items-center space-y-6 px-4">
+                            <a href="/" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
+                            <a href="/story" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Story</a>
+                            <a href="/projects" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
+                            <a href="/experience" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Experience</a>
+                            <a href="/skills" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Skills</a>
+                            <a href="/publications" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Publications</a>
+                            <a href="/awards" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Awards</a>
+                            <a href="/contact" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
                         </nav>
                     </div>
                 )}
