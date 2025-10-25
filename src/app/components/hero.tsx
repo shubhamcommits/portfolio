@@ -18,9 +18,18 @@ export function Hero() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl"
+            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-transparent"
           >
-            Hi, I&apos;m Shubham Singh <br/> <br /> Scaling Platforms | Engineering Intelligence
+            Shubham Singh
+            <span className="block text-xl sm:text-2xl md:text-3xl font-normal mt-4 sm:mt-6 tracking-wide">
+              Scaling Platforms
+              <span className="hidden sm:inline mx-3">|</span>
+              <br className="block sm:hidden" />
+              Engineering Intelligence
+              <span className="hidden sm:inline mx-3">|</span>
+              <br className="block sm:hidden" />
+              Building Relations
+            </span>
           </motion.h1>
         </LampContainer>
       </section>
