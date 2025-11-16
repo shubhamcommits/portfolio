@@ -3,6 +3,8 @@ import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
 import { ProjectCard } from "../components/ui/project-card";
 import { motion } from "framer-motion";
+// Note: Metadata should be added via generateMetadata in a server component wrapper
+// or via layout.tsx for client components
 
 const projects = [
   {

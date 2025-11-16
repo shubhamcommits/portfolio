@@ -5,6 +5,8 @@ import { cn } from "@/utils/cn";
 import { Navbar } from "../components/ui/navbar";
 import { ExperienceCard, ExperienceItem } from "../components/ui/experience-card";
 import { HeroHighlight } from "../components/ui/hero-highlight";
+// Note: Metadata should be added via generateMetadata in a server component wrapper
+// or via layout.tsx for client components
 
 const roles: ExperienceItem[] = [
   {
