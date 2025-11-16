@@ -27,6 +27,54 @@ const testimonials = [
   },
 ];
 
+const topSkills = [
+  {
+    title: "AI Ops & SRE",
+    highlights: [
+      "Operate 800+ Kubernetes clusters across AWS, GCP & Alibaba",
+      "Design AI agents (Warden, K8sGPT) for self-healing & auto-remediation",
+      "Deliver 99.99% uptime via chaos testing, runbooks, and proactive detection",
+    ],
+    accent: "from-cyan-500 to-blue-500",
+  },
+  {
+    title: "Platform Engineering & DevSecOps",
+    highlights: [
+      "Build GitOps-driven supply chains with Terraform, Spinnaker, ArgoCD",
+      "Create multi-tenant developer platforms that remove toil and accelerate releases",
+      "Embed security (OPA, Vault, GuardDuty) into CI/CD and infra automation",
+    ],
+    accent: "from-blue-500 to-indigo-500",
+  },
+  {
+    title: "Cloud Architecture & FinOps",
+    highlights: [
+      "Lead cost reductions up to 70% via workload rightsizing & smart caching",
+      "Architect hybrid infrastructure with AWS CDK, Crossplane, Aurora, Redis",
+      "Establish performance baselines and governance for enterprise platforms",
+    ],
+    accent: "from-indigo-500 to-purple-500",
+  },
+  {
+    title: "Observability & Incident Intelligence",
+    highlights: [
+      "Build full-fidelity telemetry stacks with Prometheus, Grafana, Splunk, Loki",
+      "Translate SLOs into actionable alerts, runbooks, and on-call automation",
+      "Use AI summarization to speed triage and keep humans focused on impact",
+    ],
+    accent: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "Backend Systems & Software Architecture",
+    highlights: [
+      "Design event-driven services (Kafka, gRPC, WebSockets) that handle 10K+ RPS with 99.9% uptime",
+      "Lead monolith-to-microservices migrations with clear domain boundaries and DX-first APIs",
+      "Build zero-downtime CI/CD pipelines, feature flags, and rollout strategies for mission-critical apps",
+    ],
+    accent: "from-pink-500 to-rose-500",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -82,9 +130,76 @@ export default function Home() {
                     <div className="text-sm text-neutral-400">Cost Reduction</div>
                   </div>
                 </div>
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a
+                    href="/SHUBHAM_RESUME_'25.pdf"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300"
+                  >
+                    Download Resume
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                    </svg>
+                  </a>
+                  <a
+                    href="/contact"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all duration-300"
+                  >
+                    Book an Intro Call
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Top Skills Section */}
+      <section className="relative bg-black py-20 md:py-32 border-t border-white/5 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-16"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 mb-3">
+              Core Strengths
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Where I Create Leverage
+              </span>
+            </h2>
+            <p className="text-neutral-400 max-w-3xl mx-auto">
+              From AI-driven operations to cost-optimized multi-cloud platforms, here are the themes I reliably deliver on.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {topSkills.map((skill, index) => (
+              <RevealCard
+                key={skill.title}
+                delay={index * 0.08}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-800/40 p-6 lg:p-8 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10"
+              >
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-white mb-4 bg-gradient-to-r ${skill.accent}`}>
+                  {skill.title}
+                </div>
+                <ul className="space-y-3 text-sm text-neutral-300">
+                  {skill.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 mt-1.5 rounded-full bg-cyan-400" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </RevealCard>
+            ))}
+          </div>
         </div>
       </section>
 

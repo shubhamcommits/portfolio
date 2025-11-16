@@ -8,9 +8,9 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title = "Shubham Singh | AI-Powered Infrastructure, SRE & DevSecOps Leader";
+const title = "Shubham Singh | Engineering Leader in SRE, DevSecOps & AI";
 const description =
-  "Shubham Singh is a Member of Technical Staff specializing in Site Reliability Engineering, Platform Engineering, DevSecOps, and AI/ML Ops—operating 800+ Kubernetes clusters across AWS, GCP, and Alibaba Cloud while building self-healing, data-driven systems.";
+  "Shubham Singh is a seasoned Engineering Leader (SRE & DevSecOps). With a robust background in architecting and managing scalable, secure, and reliable infrastructure, he excels in driving technological innovation and operational excellence. Shubham's expertise spans across cloud-native technologies, DevOps practices, and site reliability engineering, making him a pivotal asset in building and sustaining high-performing tech environments.";
 const url = "https://shubhamsinngh.com";
 
 export const metadata: Metadata = {
