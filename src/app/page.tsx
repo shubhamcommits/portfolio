@@ -33,7 +33,7 @@ export default function Home() {
                   maintaining the velocity and innovation mindset of a startup founder. My approach: eliminate toil through 
                   intelligent automation, build platforms that empower teams rather than constrain them, and leverage 
                   smart solutions to anticipate failures before they impact users. <span className="text-white font-semibold">I don&apos;t just maintain 
-                  systems—I transform them into competitive advantages.</span>
+                  systems - I transform them into competitive advantages.</span>
                 </p>
                 
                 {/* Key metrics */}

@@ -111,7 +111,7 @@ const roles: ExperienceItem[] = [
     title: "DevOps → DevSecOps Engineer",
     summary: "Responsible for development, deployments, and engaged with multiple activities to provide users a frictionless shopping experience. Worked as a Technical SEO Manager, Technical DevSecOps Engineer across various functional teams and as a Product Owner & Engineer to mitigate production support incidents.",
     highlights: [
-      "Eliminated 500 annual production incidents (100 monthly, 400 annual) by architecting ACUTE—a centralized platform serving 5+ critical business domains including reconciliation, sales, tax, and support.",
+      "Eliminated 500 annual production incidents (100 monthly, 400 annual) by architecting ACUTE - a centralized platform serving 5+ critical business domains including reconciliation, sales, tax, and support.",
       "Achieved 100% Lighthouse and DeepCrawl SEO scores (up from stagnant 67%) as Technical SEO Manager, directly improving organic traffic and search visibility for Amway India's e-commerce platform.",
       "Earned rapid promotion to DevSecOps Engineer within 11 months and received 3 performance awards (Flame & Ignite) for consistently exceeding expectations.",
     ],
@@ -190,7 +190,7 @@ const roles: ExperienceItem[] = [
     highlights: [
       "Scaled platform from zero to 4+ major marketplace integrations (SoleSavy, RealAuthentication, TikTok Shop, Upright) within 18 months, enabling authentication for luxury goods and sneakers across leading e-commerce platforms.",
       "Reduced cloud infrastructure costs by 35% while improving performance by architecting efficient AWS infrastructure using CDK and Terraform, implementing smart caching with Redis, and optimizing CloudFront CDN delivery.",
-      "Accelerated from founding team Senior Platform Engineer to Engineering Manager in 18 months through consistent delivery of high-impact features and technical leadership, now leading eBay integration—the largest marketplace expansion to date.",
+      "Accelerated from founding team Senior Platform Engineer to Engineering Manager in 18 months through consistent delivery of high-impact features and technical leadership, now leading eBay integration-the largest marketplace expansion to date.",
     ],
     details: [],
     subRoles: [
@@ -266,7 +266,7 @@ const roles: ExperienceItem[] = [
     highlights: [
       "Delivered 40% performance improvement, 50% bundle size reduction, and 30% stability gains by leading complete application refactoring from monolith to microservices architecture with 15+ services and 150+ REST APIs.",
       "Scaled team from 3 to 10+ engineers while advancing from Software Engineer to Chief Product Officer in 13 months, demonstrating technical excellence and leadership in a high-growth startup environment.",
-      "Built Folio—a real-time collaborative document system supporting 1000+ concurrent users—using ShareDB and WebSockets, earning company recognition as Best of Palo Alto Awards 2020 and TOP REMOTE WORK TECH by CIO Reviews.",
+      "Built Folio - a real-time collaborative document system supporting 1000+ concurrent users-using ShareDB and WebSockets, earning company recognition as Best of Palo Alto Awards 2020 and TOP REMOTE WORK TECH by CIO Reviews.",
     ],
     details: [],
     subRoles: [
@@ -375,7 +375,7 @@ export default function ExperiencePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-3xl mx-auto px-4"
             >
-              Driving innovation through platform engineering, DevOps excellence, and AI-powered solutions — from startups to enterprise scale
+              Driving innovation through platform engineering, DevOps excellence, and AI-powered solutions - from startups to enterprise scale
             </motion.p>
           </motion.div>
 

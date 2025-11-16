@@ -95,7 +95,7 @@ export default function ProjectsPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto px-4"
             >
-              Architecting innovative solutions across multiple domains — from e-commerce to blockchain to AI-powered tools
+              Architecting innovative solutions across multiple domains - from e-commerce to blockchain to AI-powered tools
             </motion.p>
           </motion.div>
 

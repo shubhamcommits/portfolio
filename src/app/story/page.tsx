@@ -203,13 +203,13 @@ export default function StoryPage() {
                 {
                   number: "03",
                   title: "Fail Forward, Fail Fast",
-                  description: "Design for failure, not perfection. Resilient systems anticipate problems and recover automatically—chaos engineering is production engineering.",
+                  description: "Design for failure, not perfection. Resilient systems anticipate problems and recover automatically-chaos engineering is production engineering.",
                   color: "from-indigo-500 to-purple-500",
                 },
                 {
                   number: "04",
                   title: "Metrics Without Action Are Vanity",
-                  description: "Observability isn&apos;t about collecting data—it&apos;s about actionable insights. Every alert must have a runbook; every dashboard must drive decisions.",
+                  description: "Observability isn&apos;t about collecting data-it&apos;s about actionable insights. Every alert must have a runbook; every dashboard must drive decisions.",
                   color: "from-purple-500 to-pink-500",
                 },
                 {
