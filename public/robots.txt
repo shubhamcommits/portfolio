@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /_next/static/
+Allow: /_next/image/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /private/
 
+# Point crawlers to the sitemap and priority resources
 Sitemap: https://shubhamsinngh.com/sitemap.xml

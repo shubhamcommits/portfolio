@@ -1,62 +1,30 @@
-import { MetadataRoute } from 'next'
- 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://shubhamsinngh.com';
+import { MetadataRoute } from "next";
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/story`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/experience`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/skills`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/publications`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/awards`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ]
+const baseUrl = "https://shubhamsinngh.com";
+
+const routes: Array<{
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}> = [
+  { path: "", priority: 1, changeFrequency: "weekly" },
+  { path: "/story", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/experience", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/projects", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/skills", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/publications", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/awards", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
+  { path: "/about", priority: 0.75, changeFrequency: "monthly" },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

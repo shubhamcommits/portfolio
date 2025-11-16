@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title = "Shubham Singh | AI-Powered Infrastructure & SRE Leader";
+const title = "Shubham Singh | AI-Powered Infrastructure, SRE & DevSecOps Leader";
 const description =
   "Shubham Singh is a Member of Technical Staff specializing in Site Reliability Engineering, Platform Engineering, DevSecOps, and AI/ML Ops—operating 800+ Kubernetes clusters across AWS, GCP, and Alibaba Cloud while building self-healing, data-driven systems.";
 const url = "https://shubhamsinngh.com";
@@ -116,7 +116,7 @@ const jsonLd = {
   "email": "shubham.sinngh@outlook.com",
   "sameAs": [
     "https://github.com/shubhamcommits",
-    "https://linkedin.com/in/shubham-sinngh"
+    "https://www.linkedin.com/in/shubham-sinngh/"
   ],
   "jobTitle": "Member of Technical Staff | Site Reliability & AI Ops",
   "worksFor": {

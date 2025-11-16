@@ -73,7 +73,7 @@ You have **exceptional technical experience** but lack **visibility and thought 
 
 ### 🔴 CRITICAL (Next 2-3 Hours)
 
-#### 1. Create OG Image (30 minutes)
+#### 1. Create OG Image (30 minutes) — ✅ *Completed*
 ```bash
 # Option A: Use Canva
 1. Go to Canva.com → Search "Open Graph Image"
@@ -114,7 +114,7 @@ href: "https://github.com/shubhamcommits", // ← UPDATE
 href: "https://linkedin.com/in/shubham-sinngh", // ← VERIFY
 ```
 
-#### 3. Install Analytics (30 minutes)
+#### 3. Install Analytics (30 minutes) — ✅ *Completed (Vercel Analytics + Speed Insights)*
 
 **Option 1: Vercel Analytics (Recommended - If deployed on Vercel)**
 
@@ -239,6 +239,11 @@ After setup:
 3. Set up conversion goals
 4. Create custom dashboards
 5. Set up email reports (weekly/monthly)
+
+#### 4. Refresh Global Metadata & Title — ✅ *Completed*
+
+- Site `<title>` now: `Shubham Singh | Member of Technical Staff · AI Ops & SRE Leader`
+- Global metadata keywords + JSON-LD `knowsAbout` updated with niche resume skills (AI Ops, DevSecOps, GitOps, FluxCD, Rancher, Terraform, Prometheus, Splunk, etc.) for recruiter search alignment
 
 ### 🟡 HIGH PRIORITY (Next 4-6 Hours)
 
