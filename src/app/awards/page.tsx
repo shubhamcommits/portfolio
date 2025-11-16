@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { AwardCard } from "../components/ui/award-card";
 import { HeroHighlight } from "../components/ui/hero-highlight";
+import { RevealCard } from "../components/ui/reveal-card";
 
 interface Award {
   id: string;
@@ -161,11 +162,9 @@ export default function AwardsPage() {
           {/* Awards Grid */}
           <div className="space-y-8 lg:space-y-12">
             {awards.map((award, index) => (
-              <AwardCard
-                key={award.id}
-                award={award}
-                index={index}
-              />
+              <RevealCard key={award.id} delay={index * 0.08}>
+                <AwardCard award={award} index={index} />
+              </RevealCard>
             ))}
           </div>
         </div>

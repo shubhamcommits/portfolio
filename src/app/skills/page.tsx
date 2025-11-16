@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
 import { SkillCategory } from "../components/ui/skill-category";
+import { RevealCard } from "../components/ui/reveal-card";
 
 interface SkillGroup {
   id: string;
@@ -238,11 +239,9 @@ export default function SkillsPage() {
           {/* Skills Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             {skillGroups.map((group, index) => (
-              <SkillCategory
-                key={group.id}
-                group={group}
-                index={index}
-              />
+              <RevealCard key={group.id} delay={index * 0.05}>
+                <SkillCategory group={group} index={index} />
+              </RevealCard>
             ))}
           </div>
         </div>

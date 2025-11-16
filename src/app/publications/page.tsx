@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { PublicationCard } from "../components/ui/publication-card";
 import { HeroHighlight } from "../components/ui/hero-highlight";
+import { RevealCard } from "../components/ui/reveal-card";
 
 interface Publication {
   id: string;
@@ -108,11 +109,9 @@ export default function PublicationsPage() {
           {/* Publications Grid */}
           <div className="space-y-8 lg:space-y-12">
             {publications.map((pub, index) => (
-              <PublicationCard
-                key={pub.id}
-                publication={pub}
-                index={index}
-              />
+              <RevealCard key={pub.id} delay={index * 0.08}>
+                <PublicationCard publication={pub} index={index} />
+              </RevealCard>
             ))}
           </div>
         </div>

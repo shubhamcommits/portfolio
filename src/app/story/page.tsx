@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
 import { cn } from "@/utils/cn";
+import { RevealCard } from "../components/ui/reveal-card";
 
 const journey = [
   {
@@ -225,11 +226,8 @@ export default function StoryPage() {
                   color: "from-rose-500 to-orange-500",
                 },
               ].map((principle, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                <RevealCard
+                  key={principle.title}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/90 to-slate-800/50 p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/0 via-blue-600/0 to-purple-600/0 group-hover:from-cyan-600/5 group-hover:via-blue-600/5 group-hover:to-purple-600/5 transition-all duration-500" />
@@ -244,7 +242,7 @@ export default function StoryPage() {
                       {principle.description}
                     </p>
                   </div>
-                </motion.div>
+                </RevealCard>
               ))}
             </div>
           </motion.div>
@@ -293,11 +291,8 @@ export default function StoryPage() {
                   highlight: "Team Collaboration",
                 },
               ].map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
+                <RevealCard
+                  key={testimonial.author}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/90 to-slate-800/50 p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/0 via-blue-600/0 to-purple-600/0 group-hover:from-cyan-600/5 group-hover:via-blue-600/5 group-hover:to-purple-600/5 transition-all duration-500" />
@@ -318,7 +313,7 @@ export default function StoryPage() {
                       <p className="text-sm text-neutral-400">{testimonial.role}</p>
                     </div>
                   </div>
-                </motion.div>
+                </RevealCard>
               ))}
             </div>
             <p className="text-center text-xs text-neutral-500 mt-8">

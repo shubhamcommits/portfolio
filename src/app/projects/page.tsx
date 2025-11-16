@@ -3,6 +3,7 @@ import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
 import { ProjectCard } from "../components/ui/project-card";
 import { motion } from "framer-motion";
+import { RevealCard } from "../components/ui/reveal-card";
 // Note: Metadata should be added via generateMetadata in a server component wrapper
 // or via layout.tsx for client components
 
@@ -102,7 +103,9 @@ export default function ProjectsPage() {
           {/* Projects List */}
           <div className="space-y-8 lg:space-y-12">
             {projects.map((p, index) => (
-              <ProjectCard key={p.name} {...p} index={index} />
+              <RevealCard key={p.name} delay={index * 0.08}>
+                <ProjectCard {...p} index={index} />
+              </RevealCard>
             ))}
           </div>
 

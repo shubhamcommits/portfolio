@@ -1,6 +1,31 @@
 "use client";
 import { Hero } from "../app/components/hero";
 import { motion } from "framer-motion";
+import { RevealCard } from "./components/ui/reveal-card";
+
+const testimonials = [
+  {
+    quote:
+      "Shubham was highly regarded by the team and his expertise and knowledge, alongside his long practical experience, helped drive the project in the right direction.",
+    author: "Adrian Anghel",
+    role: "Senior Software Engineer, Octonius Inc.",
+    highlight: "Technical Leadership",
+  },
+  {
+    quote:
+      "He is a great teacher and I found it very easy to learn from him and retain all the information. He is extremely passionate and hardworking about the work he is doing.",
+    author: "Charishma Thota",
+    role: "Solutions Architect at BigPanda",
+    highlight: "Teaching & Communication",
+  },
+  {
+    quote:
+      "As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months.",
+    author: "Jessie Jia",
+    role: "Founder | Ex Meta",
+    highlight: "Mentorship & Growth",
+  },
+];
 
 export default function Home() {
   return (
@@ -84,33 +109,11 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {[
-              {
-                quote: "Shubham was highly regarded by the team and his expertise and knowledge, alongside his long practical experience, helped drive the project in the right direction.",
-                author: "Adrian Anghel",
-                role: "Senior Software Engineer, Octonius Inc.",
-                highlight: "Technical Leadership"
-              },
-              {
-                quote: "He is a great teacher and I found it very easy to learn from him and retain all the information. He is extremely passionate and hardworking about the work he is doing.",
-                author: "Charishma Thota",
-                role: "Solutions Architect at BigPanda",
-                highlight: "Teaching & Communication"
-              },
-              {
-                quote: "As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months.",
-                author: "Jessie Jia",
-                role: "Founder | Ex Meta",
-                highlight: "Mentorship & Growth"
-              },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/90 to-slate-800/50 p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300"
+            {testimonials.map((testimonial, index) => (
+              <RevealCard
+                key={testimonial.author}
+                delay={index * 0.08}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/90 to-slate-800/50 p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/0 via-blue-600/0 to-purple-600/0 group-hover:from-cyan-600/5 group-hover:via-blue-600/5 group-hover:to-purple-600/5 transition-all duration-500" />
                 <div className="relative z-10">
@@ -130,7 +133,7 @@ export default function Home() {
                     <p className="text-xs text-neutral-400">{testimonial.role}</p>
                   </div>
                 </div>
-              </motion.div>
+              </RevealCard>
             ))}
           </div>
 

@@ -412,12 +412,12 @@ export default function ExperiencePage() {
             </div>
           </motion.div>
 
-          {tabs.map((t) => (
-            <div key={t.key} className={active === t.key ? "block" : "hidden"}>
-              <div className="space-y-10">
+          {tabs.map((t) =>
+            active === t.key ? (
+              <div key={t.key} className="space-y-10">
                 {t.items.map((r, idx) => (
                   <ExperienceCard
-                    key={`${r.company}-${r.title}-${idx}`}
+                    key={`${r.company}-${r.title}-${idx}-${t.key}`}
                     {...r}
                     defaultExpanded={idx === 0}
                     showTimelineDot={false}
@@ -425,8 +425,8 @@ export default function ExperiencePage() {
                   />
                 ))}
               </div>
-            </div>
-          ))}
+            ) : null
+          )}
         </div>
       </HeroHighlight>
     </section>
