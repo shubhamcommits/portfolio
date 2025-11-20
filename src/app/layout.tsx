@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(url),
   title: {
     default: title,
-    template: `%s | Shubham Singh`,
+    template: `%s | Shubham Singh - SRE & AI Ops`,
   },
   description,
   keywords: [
@@ -78,6 +78,9 @@ export const metadata: Metadata = {
     "Octonius",
     "Portfolio",
   ],
+  alternates: {
+    canonical: './',
+  },
   authors: [{ name: "Shubham Singh", url }],
   creator: "Shubham Singh",
   openGraph: {
@@ -116,7 +119,8 @@ const jsonLd = {
   "email": "shubham.sinngh@outlook.com",
   "sameAs": [
     "https://github.com/shubhamcommits",
-    "https://www.linkedin.com/in/shubham-sinngh/"
+    "https://www.linkedin.com/in/shubham-sinngh/",
+    "https://twitter.com/shubhamsinngh_"
   ],
   "jobTitle": "Member of Technical Staff | Site Reliability & AI Ops",
   "worksFor": {
@@ -126,7 +130,7 @@ const jsonLd = {
   "alumniOf": [
     {
       "@type": "Organization",
-      "name": "NSIT"
+      "name": "Netaji Subhas Institute of Technology"
     }
   ],
   "knowsAbout": [

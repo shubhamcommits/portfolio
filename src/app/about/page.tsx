@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="flex gap-4 pt-2">
               <a
                 className="px-4 py-2 rounded-md bg-cyan-500 text-black font-medium"
-                href="/SHUBHAM_CV_'25.pdf" download
+                href="/SHUBHAM_RESUME_'25.pdf" download
               >
                 Download Resume
               </a>
