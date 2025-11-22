@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 export function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    
+
     return (
         <>
             {/* Desktop Navbar */}
@@ -20,8 +20,9 @@ export function Navbar({ className }: { className?: string }) {
                     <HoveredLink href="/skills">Skills</HoveredLink>
                     <HoveredLink href="/publications">Publications</HoveredLink>
                     <HoveredLink href="/awards">Awards</HoveredLink>
+                    <HoveredLink href="/blog">Blog</HoveredLink>
                     <HoveredLink href="/contact">Contact</HoveredLink>
-                {/* <MenuItem setActive={setActive} active={active} item="Services">
+                    {/* <MenuItem setActive={setActive} active={active} item="Services">
                     <div className="flex flex-col space-y-4 text-sm">
                         <HoveredLink href="/web-dev">Web Development</HoveredLink>
                         <HoveredLink href="/interface-design">Interface Design</HoveredLink>
@@ -29,7 +30,7 @@ export function Navbar({ className }: { className?: string }) {
                         <HoveredLink href="/branding">Branding</HoveredLink>
                     </div>
                 </MenuItem> */}
-                {/* <MenuItem setActive={setActive} active={active} item="Recent projects">
+                    {/* <MenuItem setActive={setActive} active={active} item="Recent projects">
                     <div className="  text-sm grid grid-cols-2 gap-10 p-4">
                         <ProductItem
                             title="Algochurn"
@@ -59,7 +60,7 @@ export function Navbar({ className }: { className?: string }) {
                 </MenuItem> */}
                 </Menu>
             </div>
-            
+
             {/* Mobile Navbar */}
             <div className="lg:hidden">
                 {/* Hamburger/Close Button */}
@@ -80,7 +81,7 @@ export function Navbar({ className }: { className?: string }) {
                         )}
                     </svg>
                 </button>
-                
+
                 {/* Mobile Menu Overlay */}
                 {isMobileMenuOpen && (
                     <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center overflow-hidden">
@@ -92,6 +93,7 @@ export function Navbar({ className }: { className?: string }) {
                             <a href="/skills" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Skills</a>
                             <a href="/publications" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Publications</a>
                             <a href="/awards" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Awards</a>
+                            <a href="/blog" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Blog</a>
                             <a href="/contact" className="text-2xl text-white hover:text-cyan-400 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
                         </nav>
                     </div>

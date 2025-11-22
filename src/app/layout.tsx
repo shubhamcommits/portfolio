@@ -116,13 +116,20 @@ const jsonLd = {
   "@type": "Person",
   "name": "Shubham Singh",
   "url": url,
+  "image": "https://shubhamsinngh.com/og-image.png",
   "email": "shubham.sinngh@outlook.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "South Delhi",
+    "addressRegion": "DL",
+    "addressCountry": "IN"
+  },
   "sameAs": [
     "https://github.com/shubhamcommits",
     "https://www.linkedin.com/in/shubham-sinngh/",
     "https://twitter.com/shubhamsinngh_"
   ],
-  "jobTitle": "Member of Technical Staff | Site Reliability & AI Ops",
+  "jobTitle": "Member of Technical Staff | Site Reliability Engineer | DevOps Engineer | AI Ops Engineer",
   "worksFor": {
     "@type": "Organization",
     "name": "Salesforce"
@@ -132,6 +139,13 @@ const jsonLd = {
       "@type": "Organization",
       "name": "Netaji Subhas Institute of Technology"
     }
+  ],
+  "award": [
+    "Einstein Award (Airtel International)",
+    "Best of Palo Alto - Software Engineer 2024",
+    "United Nations Recognition",
+    "TechGig Code Gladiators Winner",
+    "Amway Star Performer"
   ],
   "knowsAbout": [
     "Platform Engineering",
