@@ -77,7 +77,7 @@ const values = [
 export default function StoryClient() {
     return (
         <section id="story" className="relative">
-            <Navbar />
+            <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
                     {/* Header Section */}
