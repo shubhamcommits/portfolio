@@ -132,7 +132,7 @@ export default function Home() {
                 </div>
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
-                    href="/SHUBHAM_RESUME_'25.pdf"
+                    href="/RESUME_SHUBHAM_2026.pdf"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300"
                   >
                     Download Resume
