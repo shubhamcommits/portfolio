@@ -1,15 +1,56 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
-import { RevealCard } from "../components/ui/reveal-card";
 
 export default function ContactClient() {
+    const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+    const [errorMessage, setErrorMessage] = useState("");
+
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setFormState("sending");
+        setErrorMessage("");
+
+        const form = e.currentTarget;
+        const data = {
+            name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
+            email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
+            message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+        };
+
+        if (!data.name || !data.email || !data.message) {
+            setFormState("error");
+            setErrorMessage("All fields are required.");
+            return;
+        }
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (!res.ok) {
+                const body = await res.json();
+                throw new Error(body.error || "Something went wrong.");
+            }
+
+            setFormState("sent");
+            form.reset();
+        } catch (err) {
+            setFormState("error");
+            setErrorMessage(err instanceof Error ? err.message : "Failed to send. Please try again.");
+        }
+    }
+
     const socialLinks = [
         {
             name: "LinkedIn",
-            url: "https://www.linkedin.com/in/shubhamsingh9/",
+            url: "https://www.linkedin.com/in/shubham-sinngh/",
             icon: (
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -122,56 +163,96 @@ export default function ContactClient() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 via-emerald-600/5 to-teal-600/5" />
                             <h3 className="text-2xl font-semibold text-white mb-6 relative z-10">Send a Message</h3>
-                            <form className="space-y-6 relative z-10">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
-                                        Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
-                                        placeholder="Your name"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-neutral-300 mb-2">
-                                        Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
-                                        placeholder="your@email.com"
-                                    />
-                                </div>
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">
-                                        Message
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        rows={4}
-                                        className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all resize-none"
-                                        placeholder="How can I help you?"
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block"
+
+                            {formState === "sent" ? (
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="relative z-10 text-center py-12"
                                 >
-                                    <span className="absolute inset-0 overflow-hidden rounded-full">
-                                        <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                                    </span>
-                                    <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-8 ring-1 ring-white/10 ">
-                                        <span>Send Message</span>
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                                        <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
-                                </button>
-                            </form>
+                                    <p className="text-white font-semibold text-lg mb-2">Message sent!</p>
+                                    <p className="text-neutral-400 text-sm mb-6">I&apos;ll get back to you as soon as possible.</p>
+                                    <button
+                                        onClick={() => setFormState("idle")}
+                                        className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors"
+                                    >
+                                        Send another message
+                                    </button>
+                                </motion.div>
+                            ) : (
+                                <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
+                                            Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            required
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
+                                            placeholder="Your name"
+                                            disabled={formState === "sending"}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-neutral-300 mb-2">
+                                            Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
+                                            placeholder="your@email.com"
+                                            disabled={formState === "sending"}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">
+                                            Message
+                                        </label>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            required
+                                            rows={4}
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all resize-none"
+                                            placeholder="How can I help you?"
+                                            disabled={formState === "sending"}
+                                        />
+                                    </div>
+
+                                    {formState === "error" && (
+                                        <p className="text-red-400 text-sm">{errorMessage}</p>
+                                    )}
+
+                                    <button
+                                        type="submit"
+                                        disabled={formState === "sending"}
+                                        className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        <span className="absolute inset-0 overflow-hidden rounded-full">
+                                            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                                        </span>
+                                        <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-8 ring-1 ring-white/10">
+                                            <span>{formState === "sending" ? "Sending..." : "Send Message"}</span>
+                                            {formState !== "sending" && (
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            )}
+                                        </div>
+                                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+                                    </button>
+                                </form>
+                            )}
                         </motion.div>
                     </div>
                 </div>
