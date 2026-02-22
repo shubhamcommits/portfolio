@@ -31,7 +31,7 @@ const projects = [
     name: "Remix Recipe",
     company: "Open Source",
     year: "2023",
-    link: "https://github.com/yourusername/remix-recipe",
+    link: "https://github.com/shubhamcommits/remix",
     linkType: "github" as const,
     stack: "TypeScript, Node.js, MySQL, OpenAI, Auth0, AWS",
     blurb:
