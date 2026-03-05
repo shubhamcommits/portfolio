@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { navigation, fullNavigation } from "@/data/navigation";
@@ -17,22 +18,22 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
             <p>
               Built by{" "}
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Shubham Singh
-              </a>
+              </Link>
             </p>
             <div className="flex items-center gap-4">
-              <a href="/tools" className="hover:text-neutral-300 transition-colors">
+              <Link href="/tools" className="hover:text-neutral-300 transition-colors">
                 All Tools
-              </a>
+              </Link>
               <span className="text-neutral-700">|</span>
-              <a href="/" className="hover:text-neutral-300 transition-colors">
+              <Link href="/" className="hover:text-neutral-300 transition-colors">
                 Portfolio
-              </a>
+              </Link>
               <span className="text-neutral-700">|</span>
-              <a href="/contact" className="hover:text-neutral-300 transition-colors">
+              <Link href="/contact" className="hover:text-neutral-300 transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
