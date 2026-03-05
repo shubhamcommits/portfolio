@@ -2,17 +2,18 @@ import { Metadata } from "next";
 import ContactClient from "./contact-client";
 
 export const metadata: Metadata = {
-  title: "Contact & Connect | Shubham Singh",
+  title: "Contact Shubham Singh | Hire Staff SRE & Platform Engineer",
   description:
-    "Get in touch for collaborations, speaking opportunities, or technical consulting. Connect via Email, LinkedIn, or GitHub.",
+    "Get in touch with Shubham Singh for Staff/Lead SRE roles, platform engineering consulting, speaking opportunities, or technical collaboration. Open to relocation worldwide.",
   keywords: [
-    "Contact",
-    "Hire Software Engineer",
-    "Consulting",
-    "Speaking Opportunities",
-    "Collaboration",
-    "Email",
-    "LinkedIn",
+    "Hire SRE",
+    "Hire DevOps engineer",
+    "Hire Platform Engineer",
+    "Staff SRE available",
+    "Kubernetes expert for hire",
+    "SRE consultant",
+    "DevOps consultant",
+    "Infrastructure engineer contact",
   ],
 };
 

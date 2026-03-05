@@ -16,10 +16,10 @@ interface Award {
 
 const awards: Award[] = [
     {
-        title: "Einstein Award",
+        title: "Einstein Award (Top 1% Engineering)",
         organization: "Airtel International",
         year: "2023",
-        description: "Awarded for exceptional problem-solving skills and innovative contributions to the platform engineering team. Recognized for optimizing cloud infrastructure and reducing operational costs.",
+        description: "Awarded to the top 1% of engineering talent for exceptional problem-solving skills and innovative contributions to the platform engineering team. Recognized for building the e-SIM & KYC 2.0 platforms and optimizing cloud infrastructure.",
         icon: "🏆",
     },
     {

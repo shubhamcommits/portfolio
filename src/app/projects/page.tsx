@@ -2,19 +2,18 @@ import { Metadata } from "next";
 import ProjectsClient from "./projects-client";
 
 export const metadata: Metadata = {
-    title: "Projects & Case Studies | Shubham Singh - Platform Engineering",
+    title: "Projects & Case Studies - Platform Engineering | Shubham Singh",
     description:
-        "Discover my portfolio of projects including Tangerine Platform, Remix Recipe, and blockchain solutions. Real-world examples of scalable architecture and AI integration.",
+        "Portfolio of engineering projects: luxury aviation platform (Tangerine/Nuhma NYC), AI-powered recipe platform (Remix), and blockchain supply chain (CoffeeTrace). Built with TypeScript, AWS, Kafka, and modern cloud architecture.",
     keywords: [
-        "Software Projects",
-        "Case Studies",
-        "Platform Engineering",
-        "React",
-        "Node.js",
-        "AWS",
-        "Blockchain",
-        "AI Integration",
-        "Full Stack Development",
+        "Platform engineering projects",
+        "Full stack projects",
+        "AWS architecture case study",
+        "Kafka microservices",
+        "Blockchain supply chain",
+        "AI-powered application",
+        "Node.js TypeScript projects",
+        "Cloud architecture portfolio",
     ],
 };
 

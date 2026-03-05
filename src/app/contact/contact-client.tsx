@@ -4,10 +4,24 @@ import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 export default function ContactClient() {
     const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
+
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi();
+            cal("ui", {
+                theme: "dark",
+                styles: { branding: { brandColor: "#06b6d4" } },
+                hideEventTypeDetails: false,
+                layout: "month_view",
+            });
+        })();
+    }, []);
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -19,7 +33,14 @@ export default function ContactClient() {
             name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
             email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
             message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+            website: (form.elements.namedItem("website") as HTMLInputElement).value.trim(),
         };
+
+        // Honeypot check
+        if (data.website) {
+            setFormState("sent");
+            return;
+        }
 
         if (!data.name || !data.email || !data.message) {
             setFormState("error");
@@ -52,7 +73,7 @@ export default function ContactClient() {
             name: "LinkedIn",
             url: "https://www.linkedin.com/in/shubham-sinngh/",
             icon: (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
             ),
@@ -62,7 +83,7 @@ export default function ContactClient() {
             name: "GitHub",
             url: "https://github.com/shubhamcommits",
             icon: (
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                 </svg>
             ),
@@ -72,7 +93,7 @@ export default function ContactClient() {
             name: "Email",
             url: "mailto:shubham.sinngh@outlook.com",
             icon: (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
             ),
@@ -85,7 +106,7 @@ export default function ContactClient() {
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
-                    {/* Header Section */}
+                    {/* Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -108,21 +129,55 @@ export default function ContactClient() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto px-4"
                         >
-                            Whether you have a question, a project idea, or just want to say hi, I&apos;d love to hear from you.
+                            Book a call directly, or drop me a message. Happy to chat about roles, collaborations, or technical challenges.
                         </motion.p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                        {/* Contact Info */}
+                    {/* Schedule a Call - Primary CTA */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="max-w-4xl mx-auto mb-16"
+                    >
+                        <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/50 rounded-2xl border border-white/10 overflow-hidden">
+                            <div className="p-6 pb-0">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
+                                    <h2 className="text-xl font-semibold text-white">Schedule a Call</h2>
+                                </div>
+                                <p className="text-sm text-neutral-400 mb-4">Pick a time that works for you — 20 min intro or 45 min deep dive.</p>
+                            </div>
+                            <Cal
+                                calLink="shubham-sinngh"
+                                style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                                config={{ layout: "month_view", theme: "dark" }}
+                            />
+                        </div>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="max-w-4xl mx-auto mb-16">
+                        <div className="flex items-center gap-4">
+                            <div className="flex-1 h-px bg-white/10" />
+                            <span className="text-sm text-neutral-500 font-medium">or reach out directly</span>
+                            <div className="flex-1 h-px bg-white/10" />
+                        </div>
+                    </div>
+
+                    {/* Contact Info + Message Form */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        {/* Social Links + Location */}
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
                             className="space-y-8"
                         >
                             <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/50 rounded-2xl p-8 border border-white/10">
-                                <h3 className="text-2xl font-semibold text-white mb-6">Connect Directly</h3>
-                                <div className="space-y-6">
+                                <h3 className="text-lg font-semibold text-white mb-6">Connect Directly</h3>
+                                <div className="space-y-5">
                                     {socialLinks.map((link) => (
                                         <a
                                             key={link.name}
@@ -131,38 +186,42 @@ export default function ContactClient() {
                                             rel="noopener noreferrer"
                                             className={`flex items-center gap-4 text-neutral-400 transition-colors duration-300 ${link.color}`}
                                         >
-                                            <div className="p-3 rounded-full bg-white/5 border border-white/10">
+                                            <div className="p-2.5 rounded-full bg-white/5 border border-white/10">
                                                 {link.icon}
                                             </div>
-                                            <span className="text-lg font-medium">{link.name}</span>
+                                            <span className="text-sm font-medium">{link.name}</span>
                                         </a>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/50 rounded-2xl p-8 border border-white/10">
-                                <h3 className="text-2xl font-semibold text-white mb-4">Location</h3>
+                                <h3 className="text-lg font-semibold text-white mb-4">Location</h3>
                                 <div className="flex items-center gap-4 text-neutral-400">
-                                    <div className="p-3 rounded-full bg-white/5 border border-white/10">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="p-2.5 rounded-full bg-white/5 border border-white/10">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
-                                    <span className="text-lg">South Delhi, India</span>
+                                    <div>
+                                        <span className="text-sm">New Delhi, India</span>
+                                        <p className="text-xs text-neutral-500 mt-0.5">Open to relocation worldwide</p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* Contact Form Placeholder */}
+                        {/* Message Form */}
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
                             className="bg-gradient-to-br from-slate-900/90 to-slate-800/50 rounded-2xl p-8 border border-white/10 relative overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 via-emerald-600/5 to-teal-600/5" />
-                            <h3 className="text-2xl font-semibold text-white mb-6 relative z-10">Send a Message</h3>
+                            <h3 className="text-lg font-semibold text-white mb-6 relative z-10">Send a Message</h3>
 
                             {formState === "sent" ? (
                                 <motion.div
@@ -185,7 +244,12 @@ export default function ContactClient() {
                                     </button>
                                 </motion.div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                                <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
+                                    <div className="absolute -left-[9999px]" aria-hidden="true">
+                                        <label htmlFor="website">Website</label>
+                                        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+                                    </div>
+
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
                                             Name
@@ -195,7 +259,7 @@ export default function ContactClient() {
                                             id="name"
                                             name="name"
                                             required
-                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all text-sm"
                                             placeholder="Your name"
                                             disabled={formState === "sending"}
                                         />
@@ -209,7 +273,7 @@ export default function ContactClient() {
                                             id="email"
                                             name="email"
                                             required
-                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all"
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all text-sm"
                                             placeholder="your@email.com"
                                             disabled={formState === "sending"}
                                         />
@@ -223,7 +287,7 @@ export default function ContactClient() {
                                             name="message"
                                             required
                                             rows={4}
-                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all resize-none"
+                                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all resize-none text-sm"
                                             placeholder="How can I help you?"
                                             disabled={formState === "sending"}
                                         />

@@ -6,5 +6,18 @@ Disallow: /_next/
 Disallow: /api/
 Disallow: /private/
 
-# Point crawlers to the sitemap and priority resources
+# Sitemap
 Sitemap: https://shubhamsinngh.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /

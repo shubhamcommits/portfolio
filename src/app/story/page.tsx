@@ -2,16 +2,17 @@ import { Metadata } from "next";
 import StoryClient from "./story-client";
 
 export const metadata: Metadata = {
-  title: "My Story & Philosophy | Shubham Singh",
+  title: "My Story - From Founding Engineer to Staff SRE | Shubham Singh",
   description:
-    "From curious engineer to Engineering Leader. Read about my operating philosophy, core values, and the journey that shaped my technical leadership.",
+    "The journey from co-founding a startup in Palo Alto to managing 1,000+ Kubernetes clusters at Salesforce. Operating philosophy, core values, and what drives my approach to reliability engineering.",
   keywords: [
-    "Engineering Leadership",
-    "Operating Philosophy",
-    "Core Values",
-    "Career Journey",
-    "Mentorship",
-    "Platform Engineering",
+    "SRE career journey",
+    "Platform engineer story",
+    "Engineering leadership",
+    "Startup to enterprise",
+    "Reliability engineering philosophy",
+    "DevOps career path",
+    "Kubernetes engineer journey",
   ],
 };
 

@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Portfolio Contact <contact@shubhamsinngh.com>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `Portfolio Contact: ${name}`,

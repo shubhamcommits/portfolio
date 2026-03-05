@@ -2,22 +2,23 @@ import { Metadata } from "next";
 import SkillsClient from "./skills-client";
 
 export const metadata: Metadata = {
-    title: "Technical Skills & Expertise | Shubham Singh - SRE & AI Ops",
+    title: "Technical Skills - Kubernetes, AWS, GCP, Terraform, AI Ops | Shubham Singh",
     description:
-        "Explore my technical expertise in Kubernetes, AWS, Platform Engineering, and AI/ML Operations. A comprehensive list of tools and technologies I use to build resilient systems.",
+        "Comprehensive technical expertise in Kubernetes, AWS, GCP, Terraform, ArgoCD, Prometheus, Grafana, AI Ops, DevSecOps, and 100+ technologies for building resilient infrastructure at scale.",
     keywords: [
-        "Kubernetes",
-        "AWS",
-        "Platform Engineering",
-        "DevSecOps",
-        "SRE",
-        "AI Ops",
-        "Terraform",
-        "Go",
-        "Python",
-        "React",
-        "Next.js",
-        "System Architecture",
+        "Kubernetes expert",
+        "AWS infrastructure skills",
+        "GCP engineer",
+        "Terraform specialist",
+        "ArgoCD GitOps",
+        "Prometheus Grafana",
+        "AI Ops skills",
+        "DevSecOps tools",
+        "SRE technical skills",
+        "Platform engineering stack",
+        "Istio service mesh",
+        "Spinnaker CI/CD",
+        "Infrastructure as Code",
     ],
 };
 

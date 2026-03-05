@@ -2,17 +2,16 @@ import { Metadata } from "next";
 import AwardsClient from "./awards-client";
 
 export const metadata: Metadata = {
-  title: "Awards & Recognition | Shubham Singh",
+  title: "Awards & Recognition - Einstein Award, UN, Best of Palo Alto | Shubham Singh",
   description:
-    "Honors and awards including United Nations recognition, Einstein Award, and 'Best of Palo Alto'. A testament to impactful technical work.",
+    "Recognized with Einstein Award (Top 1% Engineering at Airtel), Best of Palo Alto, United Nations recognition for digital solutions, and multiple hackathon wins.",
   keywords: [
-    "Awards",
-    "Recognition",
-    "Einstein Award",
-    "United Nations",
-    "Hackathon Winner",
-    "Best of Palo Alto",
-    "Software Engineer",
+    "Einstein Award engineer",
+    "Best of Palo Alto software engineer",
+    "United Nations recognition",
+    "Hackathon winner",
+    "Top SRE awards",
+    "Engineering excellence awards",
   ],
 };
 

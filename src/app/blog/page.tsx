@@ -2,17 +2,20 @@ import { Metadata } from "next";
 import BlogClient from "./blog-client";
 
 export const metadata: Metadata = {
-    title: "Engineering Blog | Shubham Singh",
+    title: "SRE & Platform Engineering Blog | Shubham Singh",
     description:
-        "Insights on Platform Engineering, SRE, Kubernetes, and AI Ops. Read deep dives from an Engineering Leader managing 800+ clusters.",
+        "Deep dives into Site Reliability Engineering, Kubernetes at scale, AI Ops, agentic debugging, chaos engineering, and platform engineering from an engineer managing 1,000+ clusters.",
     keywords: [
-        "Engineering Blog",
-        "SRE Blog",
-        "Platform Engineering",
-        "Kubernetes",
-        "AI Ops",
-        "DevOps Articles",
-        "Shubham Singh Blog",
+        "SRE blog",
+        "Platform Engineering blog",
+        "Kubernetes at scale",
+        "AI Ops articles",
+        "Agentic debugging",
+        "Chaos engineering",
+        "DevOps insights",
+        "Infrastructure automation blog",
+        "Site Reliability Engineering articles",
+        "K8s fleet management",
     ],
 };
 

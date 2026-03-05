@@ -2,17 +2,17 @@ import { Metadata } from "next";
 import PublicationsClient from "./publications-client";
 
 export const metadata: Metadata = {
-  title: "Research & Publications | Shubham Singh",
+  title: "Research Publications - Nature, IEEE | Shubham Singh",
   description:
-    "Read my peer-reviewed research on Machine Learning, CVDs, and Genetic Algorithms published in Nature Scientific Reports and IEEE.",
+    "Peer-reviewed research published in Nature Scientific Reports (Impact Factor 42.78) and IEEE on machine learning, bioinformatics, computer vision, and genetic algorithms.",
   keywords: [
-    "Research Publications",
-    "Nature Scientific Reports",
-    "IEEE",
-    "Machine Learning",
-    "Bioinformatics",
-    "Genetic Algorithms",
-    "Computer Vision",
+    "Nature Scientific Reports author",
+    "IEEE publication",
+    "Machine learning research",
+    "Bioinformatics database",
+    "Computer vision GAN",
+    "Published software engineer",
+    "Research publications SRE",
   ],
 };
 

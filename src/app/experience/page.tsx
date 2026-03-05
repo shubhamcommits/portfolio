@@ -2,19 +2,20 @@ import { Metadata } from "next";
 import ExperienceClient from "./experience-client";
 
 export const metadata: Metadata = {
-    title: "Professional Experience | Shubham Singh - Salesforce, Airtel, Amway",
+    title: "Professional Experience - SRE at Salesforce, Airtel, Amway | Shubham Singh",
     description:
-        "My professional journey from Salesforce to startups. Expertise in SRE, DevSecOps, and managing large-scale Kubernetes infrastructure.",
+        "6+ years of Site Reliability Engineering, DevOps, and Platform Engineering experience. Currently managing 1,000+ Kubernetes clusters at Salesforce with 99.99% uptime. Previously SRE at Airtel (14 countries, 200+ microservices) and DevSecOps at Amway.",
     keywords: [
-        "Professional Experience",
-        "Resume",
-        "Salesforce",
-        "Airtel",
-        "Amway",
-        "SRE",
-        "DevSecOps",
-        "Kubernetes",
-        "Engineering Leadership",
+        "Site Reliability Engineer experience",
+        "Salesforce SRE",
+        "Kubernetes fleet management",
+        "DevOps career",
+        "Platform Engineer resume",
+        "SRE at scale",
+        "Airtel SRE",
+        "DevSecOps engineer",
+        "Infrastructure automation career",
+        "AI Ops experience",
     ],
 };
 

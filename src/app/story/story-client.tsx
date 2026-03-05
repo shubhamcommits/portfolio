@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
@@ -45,7 +46,7 @@ const journey = [
     {
         year: "2024-Present",
         title: "Enterprise Scale",
-        description: "Currently at Salesforce, managing 800+ Kubernetes clusters. Pioneering AI-driven incident detection and self-healing infrastructure.",
+        description: "Currently at Salesforce, contributing to reliability of 1,000+ Kubernetes clusters. Building AI-driven incident detection and self-healing infrastructure.",
         highlight: "AI-Powered Operations",
         icon: "🤖",
     },
@@ -329,6 +330,19 @@ export default function StoryClient() {
                         className="text-center max-w-4xl mx-auto"
                     >
                         <div className="p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+                            <div className="flex justify-center mb-6">
+                                <div className="relative">
+                                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 opacity-50 blur-sm" />
+                                    <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-white/20">
+                                        <Image
+                                            src="/shubham-singh-portfolio.JPG"
+                                            alt="Shubham Singh"
+                                            fill
+                                            className="object-cover object-top"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                             <h2 className="text-2xl font-semibold text-white mb-4">Beyond the Code</h2>
                             <p className="text-neutral-300 leading-relaxed mb-6">
                                 I believe in the power of technology to transform lives and businesses. My journey has been

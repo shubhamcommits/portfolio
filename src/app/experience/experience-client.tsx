@@ -18,7 +18,7 @@ const roles: ExperienceItem[] = [
     title: "Member of Technical Staff",
     summary: "Empowering platform resilience and scale - owning software development, CI/CD pipeline optimisation, infrastructure automation, proactive monitoring & alerting, security hardening, performance tuning, incident diagnosis, and cross-team collaboration.",
     highlights: [
-      "Achieved 99.99% service availability for 800+ Kubernetes clusters across hybrid cloud (AWS/Ali/GCP) and on-prem environments through systematic OS patching, kernel upgrades, and IPVS optimization.",
+      "Achieved 99.99% service availability for 1,000+ Kubernetes clusters across hybrid cloud (AWS/Ali/GCP) and on-prem environments through systematic OS patching, kernel upgrades, and IPVS optimization.",
       "Cut deployment cycles by 30% by architecting streamlined CI/CD pipelines with Terraform, Spinnaker, and ArgoCD, enabling faster iteration velocity for engineering teams.",
       "Reduced mean time to detect (MTTD) issues by 40% through comprehensive Grafana monitoring dashboards and Splunk integration, dramatically improving incident response times.",
     ],
@@ -33,7 +33,7 @@ const roles: ExperienceItem[] = [
     ],
     impact: {
       metrics: [
-        "99.99% service availability across 800+ K8s clusters",
+        "99.99% service availability across 1,000+ K8s clusters",
         "30% reduction in deployment cycles",
         "40% faster issue detection (MTTD)",
         "30% reduction in incident resolution times",
@@ -223,7 +223,7 @@ const roles: ExperienceItem[] = [
         period: "Jul 2023 - Dec 2023 (Part-time, Remote)",
         bullets: [
           "Seamlessly integrated AWS into backend, focusing on enhancing system scalability and robustness.",
-          "Successfully launched SoleSavy integration (2023), pioneering product authentication partnership with sneaker marketplace.",
+          "Successfully launched SoleSavy integration (2023), establishing the first product authentication partnership with a sneaker marketplace.",
           "Created 5+ Node.js, Python backend services with a focus on scalability and high performance.",
           "Implemented CloudFront for streamlined CDN management capabilities, significantly improving media delivery.",
           "Adopted App Runner for secure & scalable backend deployments, facilitating better app performance.",

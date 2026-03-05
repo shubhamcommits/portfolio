@@ -3,184 +3,131 @@
 import { motion } from "framer-motion";
 import { Navbar } from "../components/ui/navbar";
 import { HeroHighlight } from "../components/ui/hero-highlight";
-import { SkillCategory } from "../components/ui/skill-category";
+import { SkillCategory, type SkillGroup } from "../components/ui/skill-category";
 import { RevealCard } from "../components/ui/reveal-card";
 
-interface SkillGroup {
-  id: string;
-  title: string;
-  skills: string[];
-}
-
 const skillGroups: SkillGroup[] = [
-  {
-    id: "languages",
-    title: "Programming Languages",
-    skills: ["TypeScript / JavaScript", "Python", "Java", "Go (Golang)", "C / C++", "C#"],
-  },
-  {
-    id: "frontend",
-    title: "Frontend Frameworks & Libraries",
-    skills: ["React.js", "Angular", "Svelte", "Electron.js", "HTML5", "CSS3"],
-  },
-  {
-    id: "backend",
-    title: "Backend & Runtime Environments",
-    skills: ["Node.js", "Nginx", "Tomcat", "GraphQL", "Socket Programming"],
-  },
-  {
-    id: "databases",
-    title: "Databases & Data Stores",
-    skills: [
-      "MySQL",
-      "PostgreSQL",
-      "SQL Server",
-      "MongoDB",
-      "Redis",
-      "InfluxDB",
-      "Prometheus (TSDB)"
-    ],
-  },
-  {
-    id: "iac",
-    title: "Infrastructure as Code (IaC)",
-    skills: ["Terraform", "AWS CDK", "AWS CloudFormation", "Crossplane", "Helm", "Kustomize"],
-  },
-  {
-    id: "aws",
-    title: "AWS Cloud Services",
-    skills: [
-      "Amazon EKS",
-      "EC2",
-      "Lambda",
-      "App Runner",
-      "S3",
-      "EBS",
-      "EFS",
-      "CloudFront",
-      "Route 53",
-      "IAM",
-      "Cognito",
-      "Security Groups",
-      "NACL",
-      "Auto Scaling",
-      "Systems Manager (SSM)",
-      "Secrets Manager"
-    ],
-  },
   {
     id: "kubernetes",
     title: "Kubernetes & Container Orchestration",
     skills: [
-      "Kubernetes",
-      "Operators & CRDs",
-      "Docker",
-      "Docker Compose",
-      "Docker Swarm",
-      "Rancher",
-      "Istio (Service Mesh)",
-      "MinIO",
-      "KEDA",
-      "Flux",
-      "Buildah",
-      "Podman",
-      "Containerd"
+      { name: "Kubernetes (EKS, GKE, On-Prem)", tier: "expert" },
+      { name: "Custom Operators & CRDs", tier: "expert" },
+      { name: "Helm", tier: "expert" },
+      { name: "Docker", tier: "expert" },
+      { name: "Istio (Service Mesh)", tier: "proficient" },
+      { name: "Rancher", tier: "proficient" },
+      { name: "KEDA", tier: "proficient" },
+      { name: "Containerd / Podman", tier: "familiar" },
+    ],
+  },
+  {
+    id: "cloud",
+    title: "Cloud & Infrastructure",
+    skills: [
+      { name: "AWS (EKS, EC2, Lambda, S3, IAM, VPC)", tier: "expert" },
+      { name: "Terraform", tier: "expert" },
+      { name: "GCP (GKE, Cloud Run)", tier: "proficient" },
+      { name: "Alibaba Cloud", tier: "proficient" },
+      { name: "AWS CDK", tier: "proficient" },
+      { name: "Crossplane", tier: "familiar" },
     ],
   },
   {
     id: "cicd",
     title: "CI/CD & GitOps",
     skills: [
-      "Jenkins",
-      "GitLab CI/CD",
-      "GitHub Actions",
-      "Bitbucket Pipelines",
-      "Travis CI",
-      "ArgoCD (GitOps)",
-      "Flux (GitOps)",
-      "Spinnaker"
+      { name: "ArgoCD", tier: "expert" },
+      { name: "Spinnaker", tier: "expert" },
+      { name: "GitHub Actions", tier: "expert" },
+      { name: "FluxCD", tier: "proficient" },
+      { name: "Jenkins", tier: "proficient" },
     ],
   },
   {
     id: "observability",
-    title: "Monitoring & Observability",
+    title: "Observability & Incident Response",
     skills: [
-      "Prometheus",
-      "Grafana",
-      "Dynatrace",
-      "Splunk",
-      "ELK Stack (Elasticsearch, Logstash, Kibana)",
-      "Loki",
-      "CloudWatch",
-      "CloudTrail",
-      "Fluentd",
-      "Vector"
+      { name: "Prometheus", tier: "expert" },
+      { name: "Grafana", tier: "expert" },
+      { name: "Splunk", tier: "expert" },
+      { name: "Loki", tier: "proficient" },
+      { name: "ELK Stack", tier: "proficient" },
+      { name: "PagerDuty", tier: "proficient" },
+    ],
+  },
+  {
+    id: "aiops",
+    title: "AI Ops & Agentic Automation",
+    skills: [
+      { name: "K8sGPT", tier: "expert" },
+      { name: "Agentic Framework Design", tier: "expert" },
+      { name: "AI-Driven Remediation", tier: "expert" },
+      { name: "LangChain", tier: "proficient" },
+      { name: "OpenAI APIs", tier: "proficient" },
+      { name: "RAG Pipelines", tier: "familiar" },
     ],
   },
   {
     id: "security",
     title: "Security & Compliance",
     skills: [
-      "SonarQube",
-      "AWS Security Hub",
-      "GuardDuty",
-      "AWS Shield",
-      "WAF (Web Application Firewall)",
-      "Amazon Inspector",
-      "OPA/Gatekeeper",
-      "HashiCorp Vault",
-      "Puppet"
+      { name: "OPA / Gatekeeper", tier: "expert" },
+      { name: "HashiCorp Vault", tier: "proficient" },
+      { name: "AWS GuardDuty / Security Hub", tier: "proficient" },
+      { name: "RHEL Hardening & OS Patching", tier: "proficient" },
+      { name: "IPVS / iptables", tier: "proficient" },
     ],
   },
   {
-    id: "messaging",
-    title: "Message Brokers & Event Streaming",
-    skills: ["Apache Kafka", "RabbitMQ", "Amazon SQS", "Apache Pulsar", "Redis Streams", "MQTT"],
+    id: "languages",
+    title: "Programming Languages",
+    skills: [
+      { name: "TypeScript / JavaScript", tier: "expert" },
+      { name: "Go", tier: "proficient" },
+      { name: "Python", tier: "proficient" },
+      { name: "Bash", tier: "expert" },
+      { name: "Java", tier: "familiar" },
+    ],
   },
   {
-    id: "search",
-    title: "Search & Analytics Engines",
-    skills: ["Elasticsearch", "OpenSearch", "Apache Solr"],
+    id: "data",
+    title: "Data & Messaging",
+    skills: [
+      { name: "PostgreSQL", tier: "expert" },
+      { name: "Redis", tier: "expert" },
+      { name: "Apache Kafka", tier: "proficient" },
+      { name: "MongoDB", tier: "proficient" },
+      { name: "RabbitMQ", tier: "familiar" },
+    ],
   },
   {
     id: "linux",
-    title: "Linux & System Administration",
+    title: "Linux & Systems",
     skills: [
-      "Linux/Unix Administration",
-      "System Performance Tuning",
-      "Networking & DNS",
-      "File Systems",
-      "Kernel Internals",
-      "System Troubleshooting",
-      "eBPF",
-      "iptables/nftables",
-      "System Calls"
+      { name: "Linux Administration", tier: "expert" },
+      { name: "Networking & DNS", tier: "expert" },
+      { name: "Kernel Internals & IPVS", tier: "proficient" },
+      { name: "Performance Tuning", tier: "proficient" },
+      { name: "eBPF", tier: "familiar" },
     ],
   },
   {
-    id: "aiml",
-    title: "AI/ML & LLM Operations",
+    id: "backend",
+    title: "Backend & Architecture",
     skills: [
-      "LangChain",
-      "OpenAI APIs",
-      "Amazon Bedrock",
-      "Hugging Face Transformers",
-      "TensorFlow",
-      "PyTorch",
-      "scikit-learn",
-      "Vector Databases (Weaviate, Pinecone)",
-      "RAG Pipelines",
-      "Prompt Engineering",
-      "Autonomous Agents",
-      "Agentic Framework Design",
-      "AI-driven Monitoring & Remediation",
-      "LLM Orchestration",
-      "GitHub Copilot",
-      "AWS CodeWhisperer",
-      "Cursor AI"
+      { name: "Node.js", tier: "expert" },
+      { name: "Microservices Architecture", tier: "expert" },
+      { name: "Event-Driven Systems (Kafka, gRPC)", tier: "proficient" },
+      { name: "WebSockets", tier: "proficient" },
+      { name: "GraphQL", tier: "familiar" },
     ],
   },
 ];
+
+// Count totals for stats
+const totalSkills = skillGroups.reduce((acc, g) => acc + g.skills.length, 0);
+const expertCount = skillGroups.reduce((acc, g) => acc + g.skills.filter(s => s.tier === "expert").length, 0);
 
 export default function SkillsClient() {
   return (
@@ -211,7 +158,7 @@ export default function SkillsClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto px-4"
             >
-              Breadth with depth across platform engineering, cloud infrastructure, and AI-driven solutions
+              Focused depth in platform engineering, reliability, and cloud infrastructure
             </motion.p>
           </motion.div>
 
@@ -220,19 +167,40 @@ export default function SkillsClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
           >
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-6 border border-cyan-500/20">
-              <h3 className="text-3xl font-bold text-white mb-2">12</h3>
-              <p className="text-neutral-400">Skill Categories</p>
+              <h3 className="text-3xl font-bold text-white mb-2">{expertCount}</h3>
+              <p className="text-neutral-400">Expert-Level Skills</p>
             </div>
             <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-2xl p-6 border border-blue-500/20">
-              <h3 className="text-3xl font-bold text-white mb-2">100+</h3>
+              <h3 className="text-3xl font-bold text-white mb-2">{totalSkills}</h3>
               <p className="text-neutral-400">Technologies & Tools</p>
             </div>
             <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl p-6 border border-indigo-500/20">
-              <h3 className="text-3xl font-bold text-white mb-2">7+</h3>
-              <p className="text-neutral-400">Years Experience</p>
+              <h3 className="text-3xl font-bold text-white mb-2">6+</h3>
+              <p className="text-neutral-400">Years in Production</p>
+            </div>
+          </motion.div>
+
+          {/* Tier Legend */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="flex flex-wrap items-center justify-center gap-6 mb-12 text-xs text-neutral-500"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-gradient-to-r from-cyan-500/40 to-blue-500/40 border border-cyan-400/40" />
+              <span>Expert &mdash; daily use, can architect with</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-400/25" />
+              <span>Proficient &mdash; extensive production use</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-white/5 border border-white/10" />
+              <span>Familiar &mdash; project-level exposure</span>
             </div>
           </motion.div>
 

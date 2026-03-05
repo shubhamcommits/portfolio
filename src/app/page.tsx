@@ -3,6 +3,14 @@ import { Hero } from "../app/components/hero";
 import { motion } from "framer-motion";
 import { RevealCard } from "./components/ui/reveal-card";
 
+const companies = [
+  { name: "Salesforce", role: "MTS / Acting Staff SRE", period: "2024 - Present" },
+  { name: "Airtel International", role: "SRE II", period: "2022 - 2024" },
+  { name: "Amway India", role: "DevSecOps Engineer", period: "2020 - 2022" },
+  { name: "Legitmark", role: "Engineering Manager", period: "2023 - Present" },
+  { name: "Octonius Inc.", role: "Co-Founder & CPO", period: "2018 - 2021" },
+];
+
 const testimonials = [
   {
     quote:
@@ -29,10 +37,10 @@ const testimonials = [
 
 const topSkills = [
   {
-    title: "AI Ops & SRE",
+    title: "AI Ops & Agentic Debugging",
     highlights: [
-      "Operate 800+ Kubernetes clusters across AWS, GCP & Alibaba",
-      "Design AI agents (Warden, K8sGPT) for self-healing & auto-remediation",
+      "Operate 1,000+ Kubernetes clusters across AWS, GCP & Alibaba Cloud",
+      "Design AI agents (Warden, K8sGPT) for self-healing & autonomous remediation",
       "Deliver 99.99% uptime via chaos testing, runbooks, and proactive detection",
     ],
     accent: "from-cyan-500 to-blue-500",
@@ -49,7 +57,7 @@ const topSkills = [
   {
     title: "Cloud Architecture & FinOps",
     highlights: [
-      "Lead cost reductions up to 70% via workload rightsizing & smart caching",
+      "Lead cost reductions up to 70% via workload rightsizing at Salesforce",
       "Architect hybrid infrastructure with AWS CDK, Crossplane, Aurora, Redis",
       "Establish performance baselines and governance for enterprise platforms",
     ],
@@ -67,9 +75,9 @@ const topSkills = [
   {
     title: "Backend Systems & Software Architecture",
     highlights: [
-      "Design event-driven services (Kafka, gRPC, WebSockets) that handle 10K+ RPS with 99.9% uptime",
+      "Design event-driven services (Kafka, gRPC, WebSockets) handling 10K+ RPS at 99.9% uptime",
       "Lead monolith-to-microservices migrations with clear domain boundaries and DX-first APIs",
-      "Build zero-downtime CI/CD pipelines, feature flags, and rollout strategies for mission-critical apps",
+      "Build zero-downtime CI/CD pipelines with canary releases and automated rollback strategies",
     ],
     accent: "from-pink-500 to-rose-500",
   },
@@ -79,41 +87,46 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      
-      {/* Executive Summary Section */}
-      <section className="relative bg-black -mt-32 md:-mt-40 pb-20 md:pb-32">
+
+      {/* Career Snapshot - Above the fold priority */}
+      <section className="relative bg-black -mt-32 md:-mt-40 pb-12 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             className="max-w-4xl mx-auto"
           >
             <div className="relative">
-              {/* Decorative element */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl" />
-              
+
               <div className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/50 border border-white/20 rounded-2xl p-8 md:p-12">
+                {/* Current Role Badge */}
+                <div className="flex items-center justify-center gap-2 mb-6">
+                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                  <span className="text-sm text-neutral-400">Currently at</span>
+                  <span className="text-sm font-semibold text-white">Salesforce</span>
+                  <span className="text-sm text-neutral-500">|</span>
+                  <span className="text-sm text-cyan-400">Open to Staff/Lead SRE roles worldwide</span>
+                </div>
+
                 <h2 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-6 text-center">
                   What I Bring to the Table
                 </h2>
                 <p className="text-lg md:text-xl text-neutral-300 leading-relaxed text-center mb-8">
-                  I architect <span className="text-white font-semibold">resilient infrastructure at enterprise scale</span> while 
-                  maintaining the velocity and innovation mindset of a startup founder. My approach: eliminate toil through 
-                  intelligent automation, build platforms that empower teams rather than constrain them, and leverage 
-                  smart solutions to anticipate failures before they impact users. <span className="text-white font-semibold">I don&apos;t just maintain 
+                  I architect <span className="text-white font-semibold">resilient infrastructure at enterprise scale</span> while
+                  maintaining the velocity and innovation mindset of a startup founder. My approach: eliminate toil through
+                  intelligent automation, build platforms that empower teams rather than constrain them, and leverage
+                  AI agents to anticipate failures before they impact users. <span className="text-white font-semibold">I don&apos;t just maintain
                   systems - I transform them into competitive advantages.</span>
                 </p>
-                
+
                 {/* Key metrics */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 pt-8 border-t border-white/10">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
-                      800+
+                      1,000+
                     </div>
                     <div className="text-sm text-neutral-400">K8s Clusters Managed</div>
                   </div>
@@ -125,11 +138,13 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                      70%
+                      30%
                     </div>
-                    <div className="text-sm text-neutral-400">Cost Reduction</div>
+                    <div className="text-sm text-neutral-400">MTTR Reduction via AI Ops</div>
                   </div>
                 </div>
+
+                {/* CTAs */}
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
                     href="/RESUME_SHUBHAM_2026.pdf"
@@ -141,12 +156,14 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="/contact"
+                    href="https://cal.com/shubham-sinngh"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all duration-300"
                   >
-                    Book an Intro Call
+                    Schedule a Call
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </a>
                 </div>
@@ -156,7 +173,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Top Skills Section */}
+      {/* Career Timeline Strip */}
+      <section className="relative bg-black py-12 md:py-16 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 mb-3">
+              Career Journey
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {companies.map((company, index) => (
+              <motion.div
+                key={company.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="text-center p-4 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition-all duration-300"
+              >
+                <p className="text-white font-semibold text-sm mb-1">{company.name}</p>
+                <p className="text-cyan-400 text-xs mb-1">{company.role}</p>
+                <p className="text-neutral-500 text-xs">{company.period}</p>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mt-6"
+          >
+            <a href="/experience" className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1">
+              View full experience
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Strengths */}
       <section className="relative bg-black py-20 md:py-32 border-t border-white/5 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -175,7 +239,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-neutral-400 max-w-3xl mx-auto">
-              From AI-driven operations to cost-optimized multi-cloud platforms, here are the themes I reliably deliver on.
+              From AI-driven operations and agentic debugging to cost-optimized multi-cloud platforms, here are the themes I reliably deliver on.
             </p>
           </motion.div>
 
@@ -200,6 +264,30 @@ export default function Home() {
               </RevealCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Published Research Strip */}
+      <section className="relative bg-black py-12 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-wrap items-center justify-center gap-6 text-sm text-neutral-400"
+          >
+            <span className="text-cyan-400 font-semibold uppercase tracking-wider text-xs">Published In</span>
+            <a href="https://www.nature.com/articles/s41598-019-40704-5" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-medium">
+              Nature Scientific Reports
+            </a>
+            <span className="text-neutral-600">|</span>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9557583" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-medium">
+              IEEE
+            </a>
+            <span className="text-neutral-600">|</span>
+            <span className="text-neutral-500">Impact Factor: 42.78</span>
+          </motion.div>
         </div>
       </section>
 

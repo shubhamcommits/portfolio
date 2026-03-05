@@ -14,9 +14,9 @@ export const blogPosts: BlogPost[] = [
         slug: "future-of-platform-engineering-ai-ops",
         title: "The Future of Platform Engineering: AI-Driven Operations",
         excerpt: "How AI agents are transforming traditional SRE roles from reactive firefighting to proactive system evolution.",
-        date: "2024-03-15",
+        date: "2025-12-15",
         readTime: "5 min read",
-        tags: ["Platform Engineering", "AI Ops", "SRE"],
+        tags: ["Platform Engineering", "AI Ops", "SRE", "Agentic AI"],
         content: `
       ## The Shift to AI Ops
 
@@ -34,20 +34,19 @@ export const blogPosts: BlogPost[] = [
       3. Handling the complex "unknown unknowns" that AI cannot yet predict.
 
       The future is autonomous, but human-directed.
-    `,
-        image: "/blog/ai-ops.jpg"
+    `
     },
     {
         slug: "scaling-kubernetes-800-clusters",
-        title: "Lessons Learned Managing 800+ Kubernetes Clusters",
+        title: "Lessons Learned Managing 1,000+ Kubernetes Clusters",
         excerpt: "Key strategies for multi-cloud fleet management, cost optimization, and security at enterprise scale.",
-        date: "2024-02-28",
+        date: "2025-10-28",
         readTime: "8 min read",
-        tags: ["Kubernetes", "Scaling", "Cloud Architecture"],
+        tags: ["Kubernetes", "Scaling", "Cloud Architecture", "Fleet Management"],
         content: `
       ## Managing Fleet Scale
 
-      Running a handful of clusters is easy. Running 800+ across AWS, GCP, and Alibaba Cloud is a different beast entirely. Here are the core principles that keep our ship afloat.
+      Running a handful of clusters is easy. Running 1,000+ across AWS, GCP, and Alibaba Cloud is a different beast entirely. Here are the core principles that keep our ship afloat.
 
       ### 1. GitOps is Non-Negotiable
 
@@ -65,16 +64,15 @@ export const blogPosts: BlogPost[] = [
       ### 3. Cost Visibility
 
       When you run at this scale, a 10% inefficiency costs millions. We implemented FinOps practices directly into the engineering workflow, giving teams visibility into their pod costs in real-time.
-    `,
-        image: "/blog/k8s-scale.jpg"
+    `
     },
     {
         slug: "building-resilient-systems",
-        title: "Chaos Engineering: Building Resilient Systems",
-        excerpt: "Why breaking your own systems in production is the only way to guarantee reliability.",
-        date: "2024-01-10",
+        title: "Chaos Engineering: Building Resilient Systems at Scale",
+        excerpt: "Why breaking your own systems in production is the only way to guarantee reliability at enterprise scale.",
+        date: "2025-08-10",
         readTime: "6 min read",
-        tags: ["Chaos Engineering", "Resilience", "DevOps"],
+        tags: ["Chaos Engineering", "Resilience", "SRE", "Kubernetes"],
         content: `
       ## Embrace the Failure
 
