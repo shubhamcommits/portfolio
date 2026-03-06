@@ -6,7 +6,40 @@ import { HeroHighlight } from "../../components/ui/hero-highlight";
 import { BlogPost } from "../blog-data";
 import Link from "next/link";
 
+const SITE_URL = "https://shubhamsinngh.com";
+
 export default function BlogPostClient({ post }: { post: BlogPost }) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "datePublished": post.date,
+        "author": {
+            "@type": "Person",
+            "name": "Shubham Singh",
+            "url": SITE_URL
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Shubham Singh"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/blog/${post.slug}`
+        },
+        "keywords": post.tags.join(", ")
+    };
+
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE_URL}/blog` },
+            { "@type": "ListItem", "position": 3, "name": post.title, "item": `${SITE_URL}/blog/${post.slug}` }
+        ]
+    };
     // Simple markdown renderer for the content
     const renderContent = (content: string) => {
         return content.split('\n').map((line, index) => {
@@ -32,6 +65,14 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
 
     return (
         <section className="relative min-h-screen bg-slate-950">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start h-full min-h-screen">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">

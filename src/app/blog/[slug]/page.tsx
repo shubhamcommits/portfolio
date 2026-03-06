@@ -29,32 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "article",
             publishedTime: post.date,
             authors: ["Shubham Singh"],
-        },
-        other: {
-            "script:ld+json": JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://shubhamsinngh.com"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Blog",
-                        "item": "https://shubhamsinngh.com/blog"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": post.title,
-                        "item": `https://shubhamsinngh.com/blog/${post.slug}`
-                    }
-                ]
-            })
         }
     };
 }

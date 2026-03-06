@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/config";
 
-const baseUrl = "https://shubhamsinngh.com";
+const baseUrl = siteConfig.url;
 
 const routes: Array<{
   path: string;
@@ -24,9 +25,9 @@ const routes: Array<{
     { path: "/tools/yaml-json-converter", priority: 0.85, changeFrequency: "monthly", lastModified: "2026-03-05" },
     { path: "/tools/k8s-manifest-generator", priority: 0.85, changeFrequency: "monthly", lastModified: "2026-03-05" },
     // Blog posts
-    { path: "/blog/future-of-platform-engineering-ai-ops", priority: 0.75, changeFrequency: "monthly", lastModified: "2025-12-15" },
-    { path: "/blog/scaling-kubernetes-800-clusters", priority: 0.75, changeFrequency: "monthly", lastModified: "2025-10-28" },
-    { path: "/blog/building-resilient-systems", priority: 0.75, changeFrequency: "monthly", lastModified: "2025-08-10" },
+    { path: "/blog/future-of-platform-engineering-ai-ops", priority: 0.75, changeFrequency: "monthly", lastModified: "2026-02-15" },
+    { path: "/blog/scaling-kubernetes-1000-clusters", priority: 0.75, changeFrequency: "monthly", lastModified: "2026-01-28" },
+    { path: "/blog/building-resilient-systems", priority: 0.75, changeFrequency: "monthly", lastModified: "2025-12-10" },
   ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

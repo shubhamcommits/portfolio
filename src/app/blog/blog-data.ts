@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
         slug: "future-of-platform-engineering-ai-ops",
         title: "The Future of Platform Engineering: AI-Driven Operations",
         excerpt: "How AI agents are transforming traditional SRE roles from reactive firefighting to proactive system evolution.",
-        date: "2025-12-15",
+        date: "2026-02-15",
         readTime: "5 min read",
         tags: ["Platform Engineering", "AI Ops", "SRE", "Agentic AI"],
         content: `
@@ -37,10 +37,10 @@ export const blogPosts: BlogPost[] = [
     `
     },
     {
-        slug: "scaling-kubernetes-800-clusters",
+        slug: "scaling-kubernetes-1000-clusters",
         title: "Lessons Learned Managing 1,000+ Kubernetes Clusters",
         excerpt: "Key strategies for multi-cloud fleet management, cost optimization, and security at enterprise scale.",
-        date: "2025-10-28",
+        date: "2026-01-28",
         readTime: "8 min read",
         tags: ["Kubernetes", "Scaling", "Cloud Architecture", "Fleet Management"],
         content: `
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
         slug: "building-resilient-systems",
         title: "Chaos Engineering: Building Resilient Systems at Scale",
         excerpt: "Why breaking your own systems in production is the only way to guarantee reliability at enterprise scale.",
-        date: "2025-08-10",
+        date: "2025-12-10",
         readTime: "6 min read",
         tags: ["Chaos Engineering", "Resilience", "SRE", "Kubernetes"],
         content: `

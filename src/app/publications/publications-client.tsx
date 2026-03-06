@@ -45,7 +45,7 @@ const publications: Publication[] = [
         title: "Genetic Algorithms: The Best Exercise Selection Strategy",
         journal: "Independent Research",
         year: "2019",
-        description: "The goal of this research was to assist one in selecting the best exercise among a wide range of contenders by utilising hereditary calculations.",
+        description: "This research applies genetic algorithms to optimize exercise selection from a wide range of options, finding the most effective workout combinations based on individual fitness goals.",
         link: "https://bit.ly/exerciseSelection",
         type: "research",
         tags: ["Genetic Algorithms", "Optimization", "Fitness", "Machine Learning"],

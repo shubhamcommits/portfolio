@@ -1,10 +1,19 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { Navbar } from "../../components/ui/navbar";
 import { marked } from "marked";
 import Link from "next/link";
+
+declare global {
+  interface Window {
+    html2pdf?: {
+      (): {
+        set: (options: Record<string, unknown>) => { from: (el: HTMLElement) => { save: () => Promise<void> } };
+      };
+    };
+  }
+}
 
 const SAMPLE_MD = `# Project Report
 
@@ -46,30 +55,63 @@ Built with [shubhamsinngh.com/tools](https://shubhamsinngh.com/tools)
 
 export default function MarkdownToPdfClient() {
   const [markdown, setMarkdown] = useState(SAMPLE_MD);
+  const [html, setHtml] = useState("");
+  const [mounted, setMounted] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
   const previewRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== "undefined" && !window.html2pdf) {
+      const script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js";
+      script.async = true;
+      script.onload = () => setScriptLoaded(true);
+      script.onerror = () => console.error("Failed to load html2pdf.js");
+      document.head.appendChild(script);
+    } else if (window.html2pdf) {
+      setScriptLoaded(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      const result = marked.parse(markdown, { breaks: true, gfm: true, async: false });
+      if (typeof result === "string") {
+        setHtml(result);
+      }
+    } catch (err) {
+      console.error("Markdown parse error:", err);
+    }
+  }, [markdown, mounted]);
+
   const getHtml = useCallback(() => {
-    return marked.parse(markdown, { breaks: true, gfm: true }) as string;
-  }, [markdown]);
+    return html;
+  }, [html]);
 
   const handleExportPdf = async () => {
     if (!previewRef.current) return;
     setIsGenerating(true);
 
     try {
-      const html2pdf = (await import("html2pdf.js")).default;
-      await html2pdf()
-        .set({
-          margin: [12, 16, 12, 16],
-          filename: "document.pdf",
-          image: { type: "jpeg", quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-        })
-        .from(previewRef.current)
-        .save();
-    } catch {
+      if (window.html2pdf) {
+        await window.html2pdf()
+          .set({
+            margin: [12, 16, 12, 16],
+            filename: "document.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          })
+          .from(previewRef.current)
+          .save();
+      } else {
+        throw new Error("html2pdf not loaded");
+      }
+    } catch (err) {
+      console.error("PDF generation failed:", err);
       // Fallback to browser print
       const printWindow = window.open("", "_blank");
       if (printWindow) {
@@ -119,7 +161,7 @@ export default function MarkdownToPdfClient() {
               </button>
               <button
                 onClick={handleExportPdf}
-                disabled={isGenerating || !markdown.trim()}
+                disabled={isGenerating || !markdown.trim() || !scriptLoaded}
                 className="px-4 py-1.5 text-xs font-semibold rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
               >
                 {isGenerating ? (
@@ -166,9 +208,17 @@ export default function MarkdownToPdfClient() {
             </div>
             <div
               ref={previewRef}
-              className="p-6 sm:p-8 flex-1 min-h-0 overflow-y-auto prose prose-sm sm:prose-base max-w-none prose-headings:text-neutral-900 prose-p:text-neutral-700 prose-a:text-blue-600 prose-strong:text-neutral-900 prose-code:text-pink-600 prose-code:bg-neutral-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-neutral-900 prose-pre:text-neutral-100 prose-blockquote:border-neutral-300 prose-th:bg-neutral-100 prose-td:border-neutral-200 prose-th:border-neutral-200"
-              dangerouslySetInnerHTML={{ __html: getHtml() }}
-            />
+              className="p-6 sm:p-8 flex-1 min-h-0 overflow-y-auto"
+            >
+              {!html ? (
+                <p className="text-neutral-400 text-sm">Loading preview...</p>
+              ) : (
+                <div 
+                  className="prose prose-sm sm:prose-base max-w-none prose-headings:text-neutral-900 prose-p:text-neutral-700 prose-a:text-blue-600 prose-strong:text-neutral-900 prose-code:text-pink-600 prose-code:bg-neutral-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-neutral-900 prose-pre:text-neutral-100 prose-blockquote:border-neutral-300 prose-th:bg-neutral-100 prose-td:border-neutral-200 prose-th:border-neutral-200"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              )}
+            </div>
           </div>
         </div>
 
