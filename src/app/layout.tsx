@@ -8,16 +8,16 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title = "Shubham Singh | Staff SRE & Platform Engineer | Kubernetes, AI Ops, DevSecOps";
+const title = "Shubham Singh | Infrastructure, SRE, Platform & DevSecOps Engineer | Kubernetes at Scale";
 const description =
-  "Staff-level Site Reliability & Platform Engineer at Salesforce managing 1,000+ Kubernetes clusters at 99.99% uptime. Expert in SRE, DevOps, DevSecOps, AI-driven operations, infrastructure automation, and multi-cloud architecture across AWS, GCP, and Alibaba Cloud. Open to Staff/Lead SRE roles worldwide.";
+  "Not your average DevOps engineer. Full-stack infrastructure engineer at Salesforce operating across SRE, Platform Engineering, DevSecOps, AI Ops, and Cloud Architecture. Managing 1,000+ Kubernetes clusters at 99.99% uptime across AWS, GCP, and Alibaba Cloud. From kernel-level networking (IPVS, eBPF) to AI-driven fleet operations (K8sGPT). Open to Senior/Lead/Staff roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.";
 const url = "https://shubhamsinngh.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title: {
     default: title,
-    template: `%s | Shubham Singh - Staff SRE & Platform Engineer`,
+    template: `%s | Shubham Singh - Infrastructure, SRE & Platform Engineer`,
   },
   description,
   robots: {
@@ -135,9 +135,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url,
-    title: "Shubham Singh | Staff SRE & Platform Engineer | 1,000+ K8s Clusters at 99.99% Uptime",
-    description: "Staff-level Site Reliability & Platform Engineer at Salesforce. Expert in Kubernetes fleet management, AI Ops, DevSecOps, and multi-cloud infrastructure automation. Published researcher (Nature, IEEE). Open to Staff/Lead roles worldwide.",
-    siteName: "Shubham Singh - SRE Portfolio",
+    title: "Shubham Singh | Infrastructure, SRE, Platform & DevSecOps | 1,000+ K8s Clusters at 99.99% Uptime",
+    description: "Staff-level Site Reliability & Platform Engineer at Salesforce. Expert in Kubernetes fleet management (1,000+ clusters), AI Ops, DevSecOps, and multi-cloud infrastructure. Published researcher (Nature, IEEE). Open to Senior/Lead/Staff SRE roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.",
+    siteName: "Shubham Singh - Infrastructure, SRE & Platform Engineer",
     locale: "en_US",
     images: [{
       url: "/og-image.png",
@@ -150,8 +150,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@shubhamsinngh_",
     site: "@shubhamsinngh_",
-    title: "Shubham Singh | Staff SRE & Platform Engineer",
-    description: "Managing 1,000+ K8s clusters at 99.99% uptime at Salesforce. Expert in AI Ops, DevSecOps, Kubernetes, and multi-cloud infrastructure.",
+    title: "Shubham Singh | Infrastructure, SRE, Platform & DevSecOps Engineer",
+    description: "Not your average DevOps. Full-stack infra engineer managing 1,000+ K8s clusters at 99.99% uptime. SRE, Platform, DevSecOps, AI Ops, FinOps across AWS, GCP, Alibaba Cloud.",
     images: [{
       url: "/og-image.png",
       alt: "Shubham Singh - Staff SRE & Platform Engineer",
@@ -190,7 +190,7 @@ const jsonLd = {
         "https://www.linkedin.com/in/shubham-sinngh/",
         "https://x.com/shubhamsinngh_"
       ],
-      "jobTitle": "Member of Technical Staff (Staff SRE / Platform Reliability)",
+      "jobTitle": "Member of Technical Staff (Infrastructure, SRE & Platform Reliability)",
       "worksFor": {
         "@type": "Organization",
         "name": "Salesforce",
@@ -202,28 +202,45 @@ const jsonLd = {
         "url": "http://www.nsut.ac.in"
       },
       "knowsAbout": [
+        "Infrastructure Engineering",
         "Site Reliability Engineering",
         "Platform Engineering",
-        "Kubernetes",
-        "Kubernetes Operators",
         "DevOps",
         "DevSecOps",
+        "Cloud Architecture",
+        "Kubernetes",
+        "Kubernetes Operators",
+        "Kubernetes Fleet Management",
         "AI Ops",
         "Agentic AI",
+        "FinOps",
         "Infrastructure Automation",
-        "Cloud Architecture",
         "AWS",
         "GCP",
+        "Alibaba Cloud",
         "Terraform",
+        "Crossplane",
         "ArgoCD",
         "Prometheus",
         "Grafana",
+        "Splunk",
         "Incident Response",
         "Chaos Engineering",
         "CI/CD",
         "GitOps",
         "Observability",
-        "Self-Healing Infrastructure"
+        "Self-Healing Infrastructure",
+        "Linux Kernel",
+        "IPVS",
+        "eBPF",
+        "CNI Networking",
+        "Istio Service Mesh",
+        "Go",
+        "Python",
+        "SLO SLI Design",
+        "Capacity Planning",
+        "OPA Gatekeeper",
+        "HashiCorp Vault"
       ],
       "award": [
         "Einstein Award - Top 1% Engineering (Airtel International, 2023)",
@@ -235,17 +252,47 @@ const jsonLd = {
       "hasOccupation": [
         {
           "@type": "Occupation",
+          "name": "Infrastructure Engineer",
+          "occupationLocation": { "@type": "Country", "name": "India" },
+          "skills": "Linux Kernel, IPVS, eBPF, Networking, Bare-Metal, Hybrid Cloud, Multi-Cloud, Capacity Planning"
+        },
+        {
+          "@type": "Occupation",
           "name": "Site Reliability Engineer",
           "occupationLocation": { "@type": "Country", "name": "India" },
-          "skills": "Kubernetes, AWS, GCP, Terraform, AI Ops, Prometheus, Grafana, ArgoCD, Incident Response, SLO Design"
+          "skills": "Kubernetes Fleet Management, SLO/SLI, Incident Response, On-Call, Chaos Engineering, Observability, Prometheus, Grafana"
         },
         {
           "@type": "Occupation",
           "name": "Platform Engineer",
           "occupationLocation": { "@type": "Country", "name": "India" },
-          "skills": "Infrastructure as Code, CI/CD, GitOps, Cloud Architecture, Container Orchestration"
+          "skills": "Kubernetes Operators, GitOps, ArgoCD, Crossplane, Terraform, Developer Experience, Self-Service Platforms"
+        },
+        {
+          "@type": "Occupation",
+          "name": "DevSecOps Engineer",
+          "occupationLocation": { "@type": "Country", "name": "India" },
+          "skills": "CI/CD Pipeline Security, OPA Gatekeeper, HashiCorp Vault, RBAC, Image Scanning, Compliance Automation"
+        },
+        {
+          "@type": "Occupation",
+          "name": "AI Ops Engineer",
+          "occupationLocation": { "@type": "Country", "name": "India" },
+          "skills": "K8sGPT, Agentic AI, Self-Healing Automation, AI-Driven Incident Response, LangChain"
         }
-      ]
+      ],
+      "seeks": {
+        "@type": "Demand",
+        "description": "Senior, Lead, or Staff Site Reliability Engineer / Platform Engineer / DevOps Engineer roles",
+        "availableAtOrFrom": [
+          { "@type": "Country", "name": "Netherlands" },
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "Germany" },
+          { "@type": "Country", "name": "Switzerland" },
+          { "@type": "Country", "name": "Singapore" },
+          { "@type": "Country", "name": "Sweden" }
+        ]
+      }
     },
     {
       "@type": "WebSite",

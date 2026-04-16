@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 import { RevealCard } from "./components/ui/reveal-card";
 
 const companies = [
-  { name: "Salesforce", role: "MTS / Acting Staff SRE", period: "2024 - Present" },
-  { name: "Airtel International", role: "SRE II", period: "2022 - 2024" },
-  { name: "Amway India", role: "DevSecOps Engineer", period: "2020 - 2022" },
-  { name: "Legitmark", role: "Engineering Manager", period: "2023 - Present" },
-  { name: "Octonius Inc.", role: "Co-Founder & CPO", period: "2018 - 2021" },
+  { name: "Salesforce", role: "MTS / Acting Staff SRE", period: "2024 - Present", team: "1,000+ K8s clusters, cross-team with 50+ platform engineers" },
+  { name: "Airtel International", role: "SRE II", period: "2022 - 2024", team: "Led team of 3 SREs across 14 countries" },
+  { name: "Amway India", role: "DevSecOps Engineer", period: "2020 - 2022", team: "E-commerce platform team" },
 ];
 
 const testimonials = [
@@ -108,18 +106,20 @@ export default function Home() {
                   <span className="text-sm text-neutral-400">Currently at</span>
                   <span className="text-sm font-semibold text-white">Salesforce</span>
                   <span className="text-sm text-neutral-500">|</span>
-                  <span className="text-sm text-cyan-400">Open to Staff/Lead SRE roles worldwide</span>
+                  <span className="text-sm text-cyan-400">Open to Senior/Lead/Staff SRE roles in NL, UK, DE, CH, SG, SE</span>
                 </div>
 
                 <h2 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-6 text-center">
-                  What I Bring to the Table
+                  Infrastructure &middot; SRE &middot; Platform &middot; DevSecOps
                 </h2>
-                <p className="text-lg md:text-xl text-neutral-300 leading-relaxed text-center mb-8">
-                  I architect <span className="text-white font-semibold">resilient infrastructure at enterprise scale</span> while
-                  maintaining the velocity and innovation mindset of a startup founder. My approach: eliminate toil through
-                  intelligent automation, build platforms that empower teams rather than constrain them, and leverage
-                  AI agents to anticipate failures before they impact users. <span className="text-white font-semibold">I don&apos;t just maintain
-                  systems - I transform them into competitive advantages.</span>
+                <p className="text-lg md:text-xl text-neutral-300 leading-relaxed text-center mb-4">
+                  I work across the <span className="text-white font-semibold">full infrastructure spectrum</span> &mdash; from bare-metal kernel tuning and
+                  networking (IPVS, eBPF, CNI) to fleet-scale Kubernetes orchestration, from CI/CD supply chain security to
+                  AI-driven incident remediation. Not a &quot;pipeline engineer&quot; &mdash; I <span className="text-white font-semibold">design, build, secure,
+                  and operate</span> the platforms that product teams depend on.
+                </p>
+                <p className="text-sm text-neutral-500 text-center mb-8">
+                  Infrastructure Engineering &bull; Site Reliability &bull; Platform Engineering &bull; DevOps &bull; DevSecOps &bull; Cloud Architecture &bull; FinOps &bull; AI Ops
                 </p>
 
                 {/* Key metrics */}
@@ -166,6 +166,17 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </a>
+                  <a
+                    href="https://linkedin.com/in/shubham-sinngh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all duration-300"
+                  >
+                    LinkedIn
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -187,7 +198,7 @@ export default function Home() {
               Career Journey
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {companies.map((company, index) => (
               <motion.div
                 key={company.name}
@@ -199,7 +210,8 @@ export default function Home() {
               >
                 <p className="text-white font-semibold text-sm mb-1">{company.name}</p>
                 <p className="text-cyan-400 text-xs mb-1">{company.role}</p>
-                <p className="text-neutral-500 text-xs">{company.period}</p>
+                <p className="text-neutral-500 text-xs mb-1">{company.period}</p>
+                <p className="text-neutral-600 text-[10px]">{company.team}</p>
               </motion.div>
             ))}
           </div>
@@ -231,15 +243,15 @@ export default function Home() {
             className="text-center mb-16"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400 mb-3">
-              Core Strengths
+              The Full Infrastructure Spectrum
             </p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Where I Create Leverage
+                Infra &middot; SRE &middot; Platform &middot; DevSecOps &middot; AI Ops
               </span>
             </h2>
             <p className="text-neutral-400 max-w-3xl mx-auto">
-              From AI-driven operations and agentic debugging to cost-optimized multi-cloud platforms, here are the themes I reliably deliver on.
+              I don&apos;t fit in a single box. From kernel-level networking to AI-driven fleet operations, from security hardening to FinOps &mdash; I own reliability end to end.
             </p>
           </motion.div>
 

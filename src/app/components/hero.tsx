@@ -38,13 +38,16 @@ export function Hero() {
             <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-transparent">
               Shubham Singh
               <span className="block text-xl sm:text-2xl md:text-3xl font-normal mt-4 sm:mt-6 tracking-wide">
-                Scaling Platforms
+                Infrastructure
                 <span className="hidden sm:inline mx-3">|</span>
                 <br className="block sm:hidden" />
-                Engineering Intelligence
+                SRE &amp; Platform
                 <span className="hidden sm:inline mx-3">|</span>
                 <br className="block sm:hidden" />
-                Building Relations
+                DevSecOps
+              </span>
+              <span className="block text-sm sm:text-base font-normal mt-3 tracking-normal text-slate-400">
+                Not your average DevOps engineer. I operate across the full infrastructure spectrum.
               </span>
             </h1>
           </motion.div>

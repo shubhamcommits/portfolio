@@ -58,7 +58,7 @@ export function Footer() {
               Shubham Singh
             </motion.h3>
             <p className="text-sm text-neutral-400 max-w-xs mx-auto md:mx-0">
-              Staff SRE & Platform Engineer at Salesforce. Managing 1,000+ Kubernetes clusters at 99.99% uptime. Building AI-driven operations and self-healing infrastructure.
+              Infrastructure, SRE, Platform & DevSecOps Engineer at Salesforce. Managing 1,000+ Kubernetes clusters at 99.99% uptime. From kernel-level networking to AI-driven fleet operations.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-xs text-neutral-500">
-              Open to Staff/Lead SRE roles worldwide
+              Open to Senior/Lead/Staff roles in NL, UK, DE, CH, SG, SE
             </p>
           </div>
         </div>
