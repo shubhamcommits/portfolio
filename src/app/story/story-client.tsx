@@ -32,7 +32,7 @@ const journey = [
     {
         year: "2022-2024",
         title: "Site Reliability Excellence",
-        description: "At Airtel International, managed 200+ microservices across 14 countries. Received Einstein Award for exceptional performance.",
+        description: "At Airtel Africa, managed 200+ microservices across 14 countries. Received Einstein Award for exceptional performance.",
         highlight: "Global Scale Impact",
         icon: "🌍",
     },

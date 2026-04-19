@@ -243,7 +243,7 @@ const jsonLd = {
         "HashiCorp Vault"
       ],
       "award": [
-        "Einstein Award - Top 1% Engineering (Airtel International, 2023)",
+        "Einstein Award - Top 1% Engineering (Airtel Africa, 2023)",
         "Best of Palo Alto - Software Engineer (2024)",
         "United Nations Recognition for Digital Solutions (2020)",
         "TechGig Code Gladiators Winner (2019)",

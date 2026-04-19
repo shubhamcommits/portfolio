@@ -38,7 +38,7 @@ Warden is the internal framework we built to bring AI agents into the incident l
 
 This agent continuously scans cluster health using K8sGPT. When it detects anomalies -- pod crash loops, node pressure, certificate expiry, resource contention -- it does not just alert. It investigates. It checks recent deployments, correlates with other cluster events, and produces a structured diagnosis.
 
-The result: our MTTR (Mean Time to Resolve) dropped by 30% because engineers skip the "what happened?" phase entirely.
+The result: our MTTR (Mean Time to Resolve) dropped by 70% because engineers skip the "what happened?" phase entirely.
 
 ### Agent 2: PagerDuty Enrichment Bot
 

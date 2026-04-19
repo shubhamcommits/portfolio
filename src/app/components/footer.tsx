@@ -96,7 +96,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-xs text-neutral-500">
-              Open to Senior/Lead/Staff roles in NL, UK, DE, CH, SG, SE
+              Open to Senior/Lead/Staff roles
             </p>
           </div>
         </div>

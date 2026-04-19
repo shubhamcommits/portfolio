@@ -5,7 +5,7 @@ import { RevealCard } from "./components/ui/reveal-card";
 
 const companies = [
   { name: "Salesforce", role: "MTS / Acting Staff SRE", period: "2024 - Present", team: "1,000+ K8s clusters, cross-team with 50+ platform engineers" },
-  { name: "Airtel International", role: "SRE II", period: "2022 - 2024", team: "Led team of 3 SREs across 14 countries" },
+  { name: "Airtel Africa", role: "SRE II", period: "2022 - 2024", team: "Led team of 3 SREs across 14 countries" },
   { name: "Amway India", role: "DevSecOps Engineer", period: "2020 - 2022", team: "E-commerce platform team" },
 ];
 
@@ -101,12 +101,14 @@ export default function Home() {
 
               <div className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/50 border border-white/20 rounded-2xl p-8 md:p-12">
                 {/* Current Role Badge */}
-                <div className="flex items-center justify-center gap-2 mb-6">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  <span className="text-sm text-neutral-400">Currently at</span>
-                  <span className="text-sm font-semibold text-white">Salesforce</span>
-                  <span className="text-sm text-neutral-500">|</span>
-                  <span className="text-sm text-cyan-400">Open to Senior/Lead/Staff SRE roles in NL, UK, DE, CH, SG, SE</span>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 text-center">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <span className="text-sm text-neutral-400">Currently at</span>
+                    <span className="text-sm font-semibold text-white">Salesforce</span>
+                  </div>
+                  <span className="hidden sm:inline text-sm text-neutral-500">|</span>
+                  <span className="text-sm text-cyan-400">Open to Senior/Lead/Staff roles</span>
                 </div>
 
                 <h2 className="text-cyan-400 text-sm font-semibold uppercase tracking-wider mb-6 text-center">
@@ -138,7 +140,7 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                      30%
+                      70%
                     </div>
                     <div className="text-sm text-neutral-400">MTTR Reduction via AI Ops</div>
                   </div>
