@@ -87,7 +87,7 @@ export default function Home() {
       <Hero />
 
       {/* Career Snapshot - Above the fold priority */}
-      <section className="relative bg-black -mt-32 md:-mt-40 pb-12 md:pb-16">
+      <section data-track-section="career_snapshot" className="relative bg-black -mt-32 md:-mt-40 pb-12 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* Career Timeline Strip */}
-      <section className="relative bg-black py-12 md:py-16 border-t border-white/5">
+      <section data-track-section="career_timeline" className="relative bg-black py-12 md:py-16 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* Core Strengths */}
-      <section className="relative bg-black py-20 md:py-32 border-t border-white/5 border-b border-white/5">
+      <section data-track-section="core_strengths" className="relative bg-black py-20 md:py-32 border-t border-white/5 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* Published Research Strip */}
-      <section className="relative bg-black py-12 border-b border-white/5">
+      <section data-track-section="published_research" className="relative bg-black py-12 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -306,7 +306,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative bg-black py-20 md:py-32">
+      <section data-track-section="testimonials" className="relative bg-black py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
