@@ -40,16 +40,6 @@ const publications: Publication[] = [
         type: "conference",
         tags: ["GANs", "Deep Learning", "Computer Vision", "Face Synthesis", "Neural Networks"],
     },
-    {
-        id: "exercise-selection",
-        title: "Genetic Algorithms: The Best Exercise Selection Strategy",
-        journal: "Independent Research",
-        year: "2019",
-        description: "This research applies genetic algorithms to optimize exercise selection from a wide range of options, finding the most effective workout combinations based on individual fitness goals.",
-        link: "https://bit.ly/exerciseSelection",
-        type: "research",
-        tags: ["Genetic Algorithms", "Optimization", "Fitness", "Machine Learning"],
-    }
 ];
 
 export default function PublicationsClient() {
@@ -93,8 +83,8 @@ export default function PublicationsClient() {
                         className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
                     >
                         <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-6 border border-purple-500/20">
-                            <h3 className="text-3xl font-bold text-white mb-2">3</h3>
-                            <p className="text-neutral-400">Publications</p>
+                            <h3 className="text-3xl font-bold text-white mb-2">2</h3>
+                            <p className="text-neutral-400">Peer-Reviewed Publications</p>
                         </div>
                         <div className="bg-gradient-to-br from-indigo-500/10 to-blue-500/10 rounded-2xl p-6 border border-indigo-500/20">
                             <h3 className="text-3xl font-bold text-white mb-2">42.78</h3>

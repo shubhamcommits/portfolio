@@ -4,7 +4,7 @@ import ToolsClient from "./tools-client";
 export const metadata: Metadata = {
   title: "Free Developer Tools - Markdown to PDF, AI Text Cleaner | No Sign-up",
   description:
-    "Free online developer tools: Convert Markdown to beautifully styled PDFs, clean AI-generated text to sound human. No sign-up required. Built by a Staff SRE at Salesforce.",
+    "Free online developer tools: Convert Markdown to beautifully styled PDFs, clean AI-generated text to sound human. No sign-up required. Built by an MTS at Salesforce working across SRE, DevOps, and Platform Engineering.",
   keywords: [
     "markdown to pdf",
     "markdown to pdf converter",

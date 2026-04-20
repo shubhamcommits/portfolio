@@ -38,9 +38,9 @@ const journey = [
     },
     {
         year: "2023-Present",
-        title: "Platform Engineering Leadership",
-        description: "Joined Legitmark's founding team, advancing from Senior Platform Engineer to Engineering Manager. Architecting AI-driven solutions.",
-        highlight: "Building the Future",
+        title: "Trademark Intelligence Platform",
+        description: "Handling end-to-end engineering operations at Legitmark (part-time) - AWS infrastructure, backend services, CI/CD, and marketplace integrations for a product-authentication platform.",
+        highlight: "Shipping on the Side",
         icon: "🔧",
     },
     {
@@ -105,7 +105,7 @@ export default function StoryClient() {
                             className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-3xl mx-auto px-4"
                         >
                             From a curious engineer to a platform architect, here&apos;s how I&apos;ve evolved through
-                            7+ years of solving complex problems and building scalable solutions
+                            6+ years of solving complex problems and building scalable solutions
                         </motion.p>
                     </motion.div>
 
@@ -262,10 +262,10 @@ export default function StoryClient() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                             {[
                                 {
-                                    quote: "I have worked with Shubham on a highly complex technical implementation at Octonius Inc. Although I did not join the team from the beginning, he helped me understand the core functionality of the project really quickly and that is thanks to his professionalism, social skills and willingness to cooperate. Shubham was highly regarded by the team and his expertise and knowledge, alongside his long practical experience, helped drive the project in the right direction.",
-                                    author: "Adrian Anghel",
-                                    role: "Senior Software Engineer, Octonius Inc.",
-                                    highlight: "Technical Leadership",
+                                    quote: "While working for Octonius, Shubham was my mentor. His knowledge in Software Engineering and system design is incredible. Our product truly has the capability to scale to a large user base. As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months. He has the motivation to constantly push and improve himself.",
+                                    author: "Jessie Jia",
+                                    role: "Founder | Ex Meta",
+                                    highlight: "Mentorship & Growth",
                                 },
                                 {
                                     quote: "As a supervisor, Shubham was incredibly communicative and helpful. Whenever I had any issues or questions, he would always be more than happy to help me out and walk through all the steps without any hesitation. He is a great teacher and I found it very easy to learn from him and retain all the information. He is extremely passionate and hardworking about the work he is doing. He has a vast knowledge in developing applications and using multiple different Javascript frameworks.",
@@ -274,22 +274,10 @@ export default function StoryClient() {
                                     highlight: "Teaching & Communication",
                                 },
                                 {
-                                    quote: "While working for Octonius, Shubham was my mentor. His knowledge in Software Engineering and system design is incredible. Our product truly has the capability to scale to a large user base. As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months. He has the motivation to constantly push and improve himself.",
-                                    author: "Jessie Jia",
-                                    role: "Founder | Ex Meta",
-                                    highlight: "Mentorship & Growth",
-                                },
-                                {
-                                    quote: "I was always in awe for Shubham's ability to quickly analyze the source of an emerging bug, brainstorm solutions and then quickly solve them. There were several times where I got stuck on an issue for quite some time and I could always count on Shubham to advice me and help me find a solution. Besides his great coding skills he is also an amazing person in general. He's hardworking, never complains, is funny and just simply lifts the group spirit.",
-                                    author: "Tijl Declerck",
-                                    role: "Web Developer, Octonius Inc.",
-                                    highlight: "Problem Solving",
-                                },
-                                {
-                                    quote: "We've been working for almost a year dealing with the same project. Shubham is a full stack skilled developer, he's humble, patient and responsible, always bringing his concerns to the team and researching for best solutions. He has natural social skills to maintain healthy communication with all coworkers and help the team evolve and take good decisions together. I'm very sure Shubham will develop an awesome career, due to his technical and social skills.",
-                                    author: "Jonas Balieiro Rossi",
-                                    role: "Sr. Infrastructure Engineer | SRE | DevOps",
-                                    highlight: "Team Collaboration",
+                                    quote: "I worked with Shubham on a project. Although we never met personally we did progress and communication was straight forward. A great guy with own ideas and fulfilling power!",
+                                    author: "Chris H. Leeb",
+                                    role: "Visionary. Rule Breaker. Portfolio Entrepreneur.",
+                                    highlight: "Ownership & Drive",
                                 },
                             ].map((testimonial, index) => (
                                 <RevealCard
@@ -353,16 +341,16 @@ export default function StoryClient() {
                             </p>
                             <div className="flex flex-wrap gap-3 justify-center">
                                 <span className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm">
-                                    7+ Years Experience
+                                    6+ Years Experience
                                 </span>
                                 <span className="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-sm">
-                                    3 Continents
+                                    1,000+ K8s Clusters @ 99.99%
                                 </span>
                                 <span className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm">
-                                    100+ Technologies
+                                    14 Countries (Airtel Africa)
                                 </span>
                                 <span className="px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-sm">
-                                    Millions Impacted
+                                    Published: Nature &amp; IEEE
                                 </span>
                             </div>
                         </div>

@@ -35,7 +35,7 @@ Your portfolio is a high-quality, modern web application built with **Next.js 14
 
 While the repo is excellent, here are a few things to consider to reach 10/10:
 
-1.  **Testing**: I didn't see a `__tests__` directory or `*.test.tsx` files. Adding basic unit tests (e.g., with Jest or Vitest) for your utility functions or critical components would demonstrate "Engineering Rigor" — fitting for an SRE leader.
+1.  **Testing**: I didn't see a `__tests__` directory or `*.test.tsx` files. Adding basic unit tests (e.g., with Jest or Vitest) for your utility functions or critical components would demonstrate "Engineering Rigor" - fitting for an SRE leader.
 2.  **Accessibility (A11y)**:
     *   Ensure the text contrast on the gradient backgrounds meets WCAG AA standards.
     *   Verify that all interactive elements (like the "Spotlight" cards) are keyboard navigable.

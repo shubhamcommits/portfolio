@@ -146,7 +146,7 @@ export default function ContactClient() {
                                     <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
                                     <h2 className="text-xl font-semibold text-white">Schedule a Call</h2>
                                 </div>
-                                <p className="text-sm text-neutral-400 mb-4">Pick a time that works for you — 20 min intro or 45 min deep dive.</p>
+                                <p className="text-sm text-neutral-400 mb-4">Pick a time that works for you - 20 min intro or 45 min deep dive.</p>
                             </div>
                             <Cal
                                 calLink="shubham-sinngh"

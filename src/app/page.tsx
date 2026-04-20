@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { RevealCard } from "./components/ui/reveal-card";
 
 const companies = [
-  { name: "Salesforce", role: "MTS / Acting Staff SRE", period: "2024 - Present", team: "1,000+ K8s clusters, cross-team with 50+ platform engineers" },
+  { name: "Salesforce", role: "Member of Technical Staff (DevOps / SRE)", period: "2024 - Present", team: "1,000+ K8s clusters on Hyperforce, cross-team with 50+ platform engineers" },
   { name: "Airtel Africa", role: "SRE II", period: "2022 - 2024", team: "Led team of 3 SREs across 14 countries" },
   { name: "Amway India", role: "DevSecOps Engineer", period: "2020 - 2022", team: "E-commerce platform team" },
 ];
@@ -12,10 +12,10 @@ const companies = [
 const testimonials = [
   {
     quote:
-      "Shubham was highly regarded by the team and his expertise and knowledge, alongside his long practical experience, helped drive the project in the right direction.",
-    author: "Adrian Anghel",
-    role: "Senior Software Engineer, Octonius Inc.",
-    highlight: "Technical Leadership",
+      "As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months.",
+    author: "Jessie Jia",
+    role: "Founder | Ex Meta",
+    highlight: "Mentorship & Growth",
   },
   {
     quote:
@@ -26,10 +26,10 @@ const testimonials = [
   },
   {
     quote:
-      "As a leader, he cares about the growth of others. His kindness and patience help me grow from an intern who knows a little about Node.js to someone who can write full-stack code within 3 months.",
-    author: "Jessie Jia",
-    role: "Founder | Ex Meta",
-    highlight: "Mentorship & Growth",
+      "A great guy with own ideas and fulfilling power! Communication was straight forward and he kept driving progress on the project.",
+    author: "Chris H. Leeb",
+    role: "Portfolio Entrepreneur & Mentor",
+    highlight: "Ownership & Drive",
   },
 ];
 

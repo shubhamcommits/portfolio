@@ -27,7 +27,7 @@ export function Hero() {
               <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-2 border-cyan-500/20">
                 <Image
                   src="/shubham-singh-portfolio.JPG"
-                  alt="Shubham Singh - Staff SRE & Platform Engineer"
+                  alt="Shubham Singh - MTS, SRE & Platform Engineer at Salesforce"
                   fill
                   className="object-cover scale-150 object-[center_-50%]"
                   priority

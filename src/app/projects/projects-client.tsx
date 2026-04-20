@@ -9,61 +9,59 @@ import { RevealCard } from "../components/ui/reveal-card";
 
 const projects = [
   {
+    name: "AI-Ops Agentic Framework",
+    company: "Salesforce Hyperforce",
+    year: "2025",
+    link: null,
+    linkType: "private" as const,
+    stack: "Go, Python, K8sGPT, Kubernetes, Operator SDK, Prometheus, Splunk, PagerDuty API, Argus",
+    blurb:
+      "Multi-tenant AI-Ops framework running across 1,000+ Kubernetes clusters. Tenants build custom agents on top of a shared runtime for cluster diagnosis, alert enrichment, automated SRE reporting, and self-healing.",
+    details: [
+      "Architected the agentic runtime: K8sGPT-powered cluster diagnosis, PagerDuty enrichment bot, weekly SRE report generator",
+      "Shipped custom Kubernetes Operators (Go, Operator SDK) for self-healing StatefulSets, cert rotation, and node remediation",
+      "Cut fleet-wide incident MTTR by 70% through agent-driven triage and remediation",
+      "Designed blast-radius-bounded agent guardrails — diagnostic agents read-only, remediation agents scoped to predefined actions",
+      "Reduced manual intervention ~40% via self-healing Operators running across AWS, GCP, Alibaba Cloud, and on-prem RHEL",
+    ],
+    impact: "Production-deployed across 1,000+ Kubernetes clusters at 99.99% availability",
+    role: "Architect & Lead Engineer",
+  },
+  {
     name: "Tangerine Platform",
     company: "Nuhma NYC",
-    year: "2023",
+    year: "2023 – 2024",
     link: "https://www.nuhmanyc.com/",
     linkType: "live" as const,
     stack: "TypeScript, Node.js, MySQL, Firebase, Terraform, AWS, Kafka, WebSockets",
     blurb:
-      "Digital platform for premier luxury in-flight catering service in New York, featuring MICHELIN-starred quality meals with real-time order management and client communication.",
+      "E-commerce platform for private-aviation catering in New York. Real-time order management and client-staff communication for a MICHELIN-starred service.",
     details: [
-      "Built a real-time order management system handling 500+ daily orders for private jets",
-      "Implemented WebSocket-based live tracking for order status and delivery updates",
-      "Designed scalable microservices architecture using AWS Lambda and Kafka for event streaming",
-      "Integrated with multiple payment gateways and third-party catering management systems",
-      "Reduced order processing time by 60% through automation and workflow optimization"
+      "Built the real-time order management and live-tracking flow using WebSockets",
+      "Designed the service architecture on AWS with Lambda and Kafka for event streaming",
+      "Integrated payment and catering-management third-party systems",
+      "Shipped infrastructure with Terraform for repeatable, auditable deploys",
     ],
-    impact: "Serving 50+ private aviation companies across the New York metropolitan area",
-    role: "Lead Platform Engineer"
+    impact: "Delivered production platform for NUHMA NYC's private-aviation catering service",
+    role: "Platform Engineer",
   },
   {
     name: "Remix Recipe",
-    company: "Open Source",
+    company: "Personal / Open Source",
     year: "2023",
     link: "https://github.com/shubhamcommits/remix",
     linkType: "github" as const,
     stack: "TypeScript, Node.js, MySQL, OpenAI, Auth0, AWS",
     blurb:
-      "AI-powered recipe transformation platform that scrapes recipes from any URL and generates creative variations using LLMs.",
+      "AI-powered recipe transformation tool — scrapes recipes from a URL and generates creative variations using LLMs.",
     details: [
-      "Developed intelligent web scraper supporting 100+ recipe websites with 95% accuracy",
-      "Integrated OpenAI GPT-4 API for context-aware recipe modifications and dietary adaptations",
-      "Built robust caching system reducing API costs by 40% while maintaining quick response times",
-      "Implemented user authentication and personalization features for saved recipes and preferences",
-      "Created responsive UI with real-time recipe generation and ingredient substitution suggestions"
+      "Built the web scraper + recipe parser for common recipe sites",
+      "Integrated OpenAI API for context-aware recipe modifications and dietary adaptations",
+      "Added caching to reduce redundant LLM calls and keep response times snappy",
+      "Implemented user auth and personalization for saved recipes and preferences",
     ],
-    impact: "Open source project with active community contributions and positive user feedback",
-    role: "Creator & Lead Engineer"
-  },
-  {
-    name: "SaaS Platform",
-    company: "CoffeeTrace",
-    year: "2021",
-    link: null,
-    linkType: "private" as const,
-    stack: "Node.js, Python, Angular, MongoDB, Redis, Ionic, Serverless, Kafka, Solidity, Web3.js, Polygon, IPFS, Truffle, Hardhat",
-    blurb:
-      "Blockchain-based supply chain management platform for sustainable coffee trade with climate-friendly currency features.",
-    details: [
-      "Architected blockchain integration for transparent coffee bean tracking from farm to cup",
-      "Developed mobile app for farmers to record harvest data and receive instant payments",
-      "Built analytics dashboard showing carbon footprint and sustainability metrics",
-      "Implemented smart contracts for automated fair-trade payments to coffee farmers",
-      "Created REST APIs serving 10K+ daily requests with 99.9% uptime"
-    ],
-    impact: "Developed sustainable coffee supply chain solution with blockchain integration",
-    role: "Technical Co-Founder"
+    impact: "Personal open-source experiment exploring LLM-driven content transformation",
+    role: "Creator",
   },
 ];
 

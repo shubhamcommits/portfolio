@@ -122,7 +122,7 @@ export default function ToolsClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg lg:text-xl text-neutral-400 max-w-2xl mx-auto px-4"
             >
-              Small utilities I built for myself and now share with everyone. Runs entirely in your browser — nothing leaves your machine.
+              Small utilities I built for myself and now share with everyone. Runs entirely in your browser - nothing leaves your machine.
             </motion.p>
           </motion.div>
 

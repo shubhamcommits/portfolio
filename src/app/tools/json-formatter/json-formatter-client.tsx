@@ -99,7 +99,7 @@ function minifyJson(input: string): string {
 
 const SAMPLE_JSON = `{
   "name": "shubham-singh",
-  "role": "Staff SRE",
+  "role": "Member of Technical Staff",
   "company": "Salesforce",
   "clusters": 1000,
   "uptime": "99.99%",

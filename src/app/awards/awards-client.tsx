@@ -19,35 +19,35 @@ const awards: Award[] = [
         title: "Einstein Award (Top 1% Engineering)",
         organization: "Airtel Africa",
         year: "2023",
-        description: "Awarded to the top 1% of engineering talent for exceptional problem-solving skills and innovative contributions to the platform engineering team. Recognized for building the e-SIM & KYC 2.0 platforms and optimizing cloud infrastructure.",
+        description: "Awarded to the top 1% of engineering talent for exceptional performance. Recognized for building the e-SIM & KYC 2.0 platforms and optimizing cloud infrastructure across 14 countries.",
         icon: "🏆",
     },
     {
-        title: "Best of Palo Alto - Software Engineer",
-        organization: "Palo Alto Award Program",
-        year: "2024",
-        description: "Selected for the 2024 Best of Palo Alto Award in the Software Engineer category. This recognition honors achievements and positive contributions to the local community and economy.",
-        icon: "🌟",
-    },
-    {
-        title: "United Nations Recognition",
-        organization: "United Nations",
-        year: "2020",
-        description: "Recognized for contributions to digital solutions supporting sustainable development goals. Developed open-source tools for community empowerment.",
+        title: "Reboot the Earth — Country Winner (India)",
+        organization: "United Nations Technology Innovation Labs",
+        year: "2019",
+        description: "First prize among Indian teams in the UN-organized global climate hackathon. Represented India at the United Nations for Project ViSTARa — empowering women in rural areas through climate education.",
         icon: "🇺🇳",
     },
     {
-        title: "Hackathon Winner",
-        organization: "TechGig Code Gladiators",
-        year: "2019",
-        description: "Secured top position among 200+ teams in a national level hackathon. Built an AI-driven solution for predictive maintenance in manufacturing.",
-        icon: "🥇",
+        title: "Best of Palo Alto — Software Company",
+        organization: "Octonius Inc.",
+        year: "2020",
+        description: "Company recognition in the Software Company category while leading product as Chief Product Officer. Also recognized as TOP REMOTE WORK TECH by CIO Reviews.",
+        icon: "🌟",
     },
     {
-        title: "Star Performer",
+        title: "Inventor of the Month",
+        organization: "Progate (Japan)",
+        year: "2018",
+        description: "Featured by Progate — a Japanese educational technology company — for contributions to the MorCVD web application, a database of host-pathogen interactions for cardiovascular diseases.",
+        icon: "💡",
+    },
+    {
+        title: "Flame & Ignite Awards (×3)",
         organization: "Amway India",
-        year: "2021",
-        description: "Consistently rated as top performer for delivering critical projects ahead of schedule and with zero defects. Mentored junior developers and established best practices.",
+        year: "2020 – 2021",
+        description: "Three-time recipient of Amway India's Flame & Ignite performance awards for outstanding contributions to CI/CD pipeline optimization, order-journey automation, and the ACUTE incident-reduction platform.",
         icon: "⭐",
     },
 ];
@@ -123,10 +123,10 @@ export default function AwardsClient() {
                         className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
                     >
                         {[
-                            { label: "International Awards", value: "3+" },
-                            { label: "Hackathons Won", value: "5+" },
-                            { label: "Recognitions", value: "10+" },
-                            { label: "Years of Excellence", value: "7+" },
+                            { label: "International Recognitions", value: "2" },
+                            { label: "Company Performance Awards", value: "4" },
+                            { label: "Peer-Reviewed Publications", value: "2" },
+                            { label: "Years of Experience", value: "6+" },
                         ].map((stat, index) => (
                             <div
                                 key={stat.label}

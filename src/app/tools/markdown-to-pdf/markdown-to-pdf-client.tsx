@@ -46,7 +46,7 @@ greet("World");
 | PDF Export | Done |
 | Dark Mode | Done |
 
-> "The best tool is the one you actually use." — Someone wise
+> "The best tool is the one you actually use." - Someone wise
 
 ---
 

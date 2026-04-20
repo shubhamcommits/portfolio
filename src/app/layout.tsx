@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const title = "Shubham Singh | Infrastructure, SRE, Platform & DevSecOps Engineer | Kubernetes at Scale";
 const description =
-  "Not your average DevOps engineer. Full-stack infrastructure engineer at Salesforce operating across SRE, Platform Engineering, DevSecOps, AI Ops, and Cloud Architecture. Managing 1,000+ Kubernetes clusters at 99.99% uptime across AWS, GCP, and Alibaba Cloud. From kernel-level networking (IPVS, eBPF) to AI-driven fleet operations (K8sGPT). Open to Senior/Lead/Staff roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.";
+  "Not your average DevOps engineer. Member of Technical Staff at Salesforce operating across SRE, Platform Engineering, DevSecOps, AI Ops, and Cloud Architecture. Managing 1,000+ Kubernetes clusters at 99.99% uptime across AWS, GCP, and Alibaba Cloud. From kernel-level networking (IPVS, eBPF) to AI-driven fleet operations (K8sGPT). Open to Senior/Lead/Staff roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.";
 const url = "https://shubhamsinngh.com";
 
 export const metadata: Metadata = {
@@ -41,9 +41,11 @@ export const metadata: Metadata = {
 
     // Core roles (what recruiters search)
     "Site Reliability Engineer",
-    "Staff SRE",
-    "Lead SRE",
     "Senior SRE",
+    "Lead SRE",
+    "Staff SRE",
+    "Member of Technical Staff",
+    "MTS at Salesforce",
     "Platform Engineer",
     "Staff Platform Engineer",
     "DevOps Engineer",
@@ -136,14 +138,14 @@ export const metadata: Metadata = {
     type: "website",
     url,
     title: "Shubham Singh | Infrastructure, SRE, Platform & DevSecOps | 1,000+ K8s Clusters at 99.99% Uptime",
-    description: "Staff-level Site Reliability & Platform Engineer at Salesforce. Expert in Kubernetes fleet management (1,000+ clusters), AI Ops, DevSecOps, and multi-cloud infrastructure. Published researcher (Nature, IEEE). Open to Senior/Lead/Staff SRE roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.",
+    description: "Member of Technical Staff at Salesforce — Site Reliability & Platform Engineering. Expert in Kubernetes fleet management (1,000+ clusters), AI Ops, DevSecOps, and multi-cloud infrastructure. Published researcher (Nature, IEEE). Open to Senior/Lead/Staff roles in Netherlands, UK, Germany, Switzerland, Singapore, Sweden.",
     siteName: "Shubham Singh - Infrastructure, SRE & Platform Engineer",
     locale: "en_US",
     images: [{
       url: "/og-image.png",
       width: 1200,
       height: 630,
-      alt: "Shubham Singh - Staff SRE & Platform Engineer managing 1,000+ Kubernetes clusters",
+      alt: "Shubham Singh - MTS at Salesforce managing 1,000+ Kubernetes clusters",
     }],
   },
   twitter: {
@@ -154,7 +156,7 @@ export const metadata: Metadata = {
     description: "Not your average DevOps. Full-stack infra engineer managing 1,000+ K8s clusters at 99.99% uptime. SRE, Platform, DevSecOps, AI Ops, FinOps across AWS, GCP, Alibaba Cloud.",
     images: [{
       url: "/og-image.png",
-      alt: "Shubham Singh - Staff SRE & Platform Engineer",
+      alt: "Shubham Singh - MTS, SRE & Platform Engineer at Salesforce",
     }],
   },
   icons: {
@@ -190,7 +192,7 @@ const jsonLd = {
         "https://www.linkedin.com/in/shubham-sinngh/",
         "https://x.com/shubhamsinngh_"
       ],
-      "jobTitle": "Member of Technical Staff (Infrastructure, SRE & Platform Reliability)",
+      "jobTitle": "Member of Technical Staff - DevOps Engineering",
       "worksFor": {
         "@type": "Organization",
         "name": "Salesforce",
@@ -244,40 +246,55 @@ const jsonLd = {
       ],
       "award": [
         "Einstein Award - Top 1% Engineering (Airtel Africa, 2023)",
-        "Best of Palo Alto - Software Engineer (2024)",
-        "United Nations Recognition for Digital Solutions (2020)",
-        "TechGig Code Gladiators Winner (2019)",
-        "Amway Star Performer (2021)"
+        "Reboot the Earth - Country Winner India, United Nations Technology Innovation Labs (2019)",
+        "Best of Palo Alto - Software Company, Octonius Inc. (2020)",
+        "Inventor of the Month, Progate Japan (2018)",
+        "Flame & Ignite Awards x3, Amway India (2020-2021)"
       ],
       "hasOccupation": [
         {
           "@type": "Occupation",
           "name": "Infrastructure Engineer",
-          "occupationLocation": { "@type": "Country", "name": "India" },
+          "occupationLocation": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Remote" }
+          ],
           "skills": "Linux Kernel, IPVS, eBPF, Networking, Bare-Metal, Hybrid Cloud, Multi-Cloud, Capacity Planning"
         },
         {
           "@type": "Occupation",
           "name": "Site Reliability Engineer",
-          "occupationLocation": { "@type": "Country", "name": "India" },
+          "occupationLocation": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Remote" }
+          ],
           "skills": "Kubernetes Fleet Management, SLO/SLI, Incident Response, On-Call, Chaos Engineering, Observability, Prometheus, Grafana"
         },
         {
           "@type": "Occupation",
           "name": "Platform Engineer",
-          "occupationLocation": { "@type": "Country", "name": "India" },
+          "occupationLocation": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Remote" }
+          ],
           "skills": "Kubernetes Operators, GitOps, ArgoCD, Crossplane, Terraform, Developer Experience, Self-Service Platforms"
         },
         {
           "@type": "Occupation",
           "name": "DevSecOps Engineer",
-          "occupationLocation": { "@type": "Country", "name": "India" },
+          "occupationLocation": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Remote" }
+          ],
           "skills": "CI/CD Pipeline Security, OPA Gatekeeper, HashiCorp Vault, RBAC, Image Scanning, Compliance Automation"
         },
         {
           "@type": "Occupation",
           "name": "AI Ops Engineer",
-          "occupationLocation": { "@type": "Country", "name": "India" },
+          "occupationLocation": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "Place", "name": "Remote" }
+          ],
           "skills": "K8sGPT, Agentic AI, Self-Healing Automation, AI-Driven Incident Response, LangChain"
         }
       ],
@@ -298,7 +315,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${url}/#website`,
       "url": url,
-      "name": "Shubham Singh - Staff SRE & Platform Engineer",
+      "name": "Shubham Singh - MTS, SRE & Platform Engineer",
       "description": description,
       "publisher": { "@id": `${url}/#person` },
       "inLanguage": "en-US"
