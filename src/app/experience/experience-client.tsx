@@ -305,7 +305,7 @@ export default function ExperienceClient() {
   // Simple tabs (no sticky, no URL sync)
 
   return (
-    <section id="experience">
+    <section id="experience" data-track-section="experience_root">
       <div className="relative w-full flex items-center justify-center">
         <Navbar className="top-2" />
       </div>

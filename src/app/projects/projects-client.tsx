@@ -67,7 +67,7 @@ const projects = [
 
 export default function ProjectsClient() {
   return (
-    <section id="projects" className="relative">
+    <section id="projects" data-track-section="projects_root" className="relative">
       <Navbar className="top-2" />
       <HeroHighlight containerClassName="items-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -99,7 +99,7 @@ export default function ProjectsClient() {
           </motion.div>
 
           {/* Projects List */}
-          <div className="space-y-8 lg:space-y-12">
+          <div data-track-section="projects_list" className="space-y-8 lg:space-y-12">
             {projects.map((p, index) => (
               <RevealCard key={p.name} delay={index * 0.08}>
                 <ProjectCard {...p} index={index} />
@@ -109,6 +109,7 @@ export default function ProjectsClient() {
 
           {/* CTA Section */}
           <motion.div
+            data-track-section="projects_cta"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

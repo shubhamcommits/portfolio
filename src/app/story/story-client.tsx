@@ -77,7 +77,7 @@ const values = [
 
 export default function StoryClient() {
     return (
-        <section id="story" className="relative">
+        <section id="story" data-track-section="story_root" className="relative">
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -111,6 +111,7 @@ export default function StoryClient() {
 
                     {/* Journey Timeline */}
                     <motion.div
+                        data-track-section="story_journey_timeline"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -154,6 +155,7 @@ export default function StoryClient() {
 
                     {/* Core Values */}
                     <motion.div
+                        data-track-section="story_core_values"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
@@ -182,6 +184,7 @@ export default function StoryClient() {
 
                     {/* Operating Philosophy */}
                     <motion.div
+                        data-track-section="story_operating_philosophy"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1 }}
@@ -250,6 +253,7 @@ export default function StoryClient() {
 
                     {/* Testimonials */}
                     <motion.div
+                        data-track-section="story_testimonials"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 1.6 }}
@@ -312,6 +316,7 @@ export default function StoryClient() {
 
                     {/* Personal Touch */}
                     <motion.div
+                        data-track-section="story_personal_touch"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 2 }}

@@ -143,7 +143,7 @@ export default function YamlJsonConverterClient() {
   const outputFile = direction === "yaml-to-json" ? "output.json" : "output.yaml";
 
   return (
-    <section className="relative h-screen bg-black flex flex-col overflow-hidden">
+    <section data-track-section="tool_yaml_json" className="relative h-screen bg-black flex flex-col overflow-hidden">
       <Navbar className="top-2" />
       <div className="flex-1 flex flex-col max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-4 min-h-0">
         {/* Header */}

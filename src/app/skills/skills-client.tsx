@@ -131,7 +131,7 @@ const expertCount = skillGroups.reduce((acc, g) => acc + g.skills.filter(s => s.
 
 export default function SkillsClient() {
   return (
-    <section id="skills" className="relative">
+    <section id="skills" data-track-section="skills_root" className="relative">
       <Navbar className="top-2" />
       <HeroHighlight containerClassName="items-start">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -164,6 +164,7 @@ export default function SkillsClient() {
 
           {/* Skills Stats */}
           <motion.div
+            data-track-section="skills_stats"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -205,7 +206,7 @@ export default function SkillsClient() {
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div data-track-section="skills_grid" className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             {skillGroups.map((group, index) => (
               <RevealCard key={group.id} delay={index * 0.05}>
                 <SkillCategory group={group} index={index} />

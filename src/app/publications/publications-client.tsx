@@ -44,7 +44,7 @@ const publications: Publication[] = [
 
 export default function PublicationsClient() {
     return (
-        <section id="publications" className="relative">
+        <section id="publications" data-track-section="publications_root" className="relative">
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -77,6 +77,7 @@ export default function PublicationsClient() {
 
                     {/* Publications Stats */}
                     <motion.div
+                        data-track-section="publications_stats"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -97,7 +98,7 @@ export default function PublicationsClient() {
                     </motion.div>
 
                     {/* Publications Grid */}
-                    <div className="space-y-8 lg:space-y-12">
+                    <div data-track-section="publications_grid" className="space-y-8 lg:space-y-12">
                         {publications.map((pub, index) => (
                             <RevealCard key={pub.id} delay={index * 0.08}>
                                 <PublicationCard publication={pub} index={index} />

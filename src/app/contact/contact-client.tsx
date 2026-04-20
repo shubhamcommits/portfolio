@@ -102,7 +102,7 @@ export default function ContactClient() {
     ];
 
     return (
-        <section id="contact" className="relative">
+        <section id="contact" data-track-section="contact_root" className="relative">
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -135,6 +135,7 @@ export default function ContactClient() {
 
                     {/* Schedule a Call - Primary CTA */}
                     <motion.div
+                        data-track-section="contact_calcom"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -214,6 +215,7 @@ export default function ContactClient() {
 
                         {/* Message Form */}
                         <motion.div
+                            data-track-section="contact_form"
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}

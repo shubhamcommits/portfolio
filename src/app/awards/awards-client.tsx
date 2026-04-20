@@ -54,7 +54,7 @@ const awards: Award[] = [
 
 export default function AwardsClient() {
     return (
-        <section id="awards" className="relative">
+        <section id="awards" data-track-section="awards_root" className="relative">
             <Navbar className="top-2" />
             <HeroHighlight containerClassName="items-start">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-36 pb-12 lg:pb-24">
@@ -86,7 +86,7 @@ export default function AwardsClient() {
                     </motion.div>
 
                     {/* Awards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div data-track-section="awards_grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         {awards.map((award, index) => (
                             <RevealCard
                                 key={award.title}
@@ -117,6 +117,7 @@ export default function AwardsClient() {
 
                     {/* Achievement Stats */}
                     <motion.div
+                        data-track-section="awards_stats"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}

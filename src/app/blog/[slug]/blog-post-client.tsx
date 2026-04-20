@@ -64,7 +64,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
     };
 
     return (
-        <section className="relative min-h-screen bg-slate-950">
+        <section data-track-section="blog_post_root" className="relative min-h-screen bg-slate-950">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
